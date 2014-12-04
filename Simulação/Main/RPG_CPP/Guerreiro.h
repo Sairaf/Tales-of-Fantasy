@@ -17,8 +17,7 @@ class Guerreiro : public Heroi
 {
 protected:
 
-    int num_Magia;
-	Magia* Tecnica;
+
 public:
 
 	Guerreiro(string nome = "Guerreiro", string descricao = "Descricao");
@@ -26,8 +25,7 @@ public:
 	~Guerreiro();
 	Guerreiro(const Guerreiro&);
 
- 	void Adicionar_Tecnica(const Magia&);
-	void Equipar(const Equipamento&);
+ 	void Equipar(const Equipamento&);
 	void Subir_De_Nivel(const int&);
  	void Def_Stats();
 };

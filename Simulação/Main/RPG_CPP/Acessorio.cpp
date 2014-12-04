@@ -7,7 +7,7 @@ Acessorio::Acessorio(int atk)
  //this->Add_Elemento(0);
 }
 
-Acessorio::Acessorio(const string& nome,const string& descricao,const int& b_Atk,const int& b_Def,const int& b_Mag,const int& p_Def,const Elemento& elemento)
+Acessorio::Acessorio(const string& nome,const string& descricao,const int& b_Atk,const int& b_Def,const int& b_Mag,const int& p_Def,const string& elemento)
 :Equipamento(nome,descricao, b_Atk, b_Def, b_Mag, p_Def)
 {
  int i;

@@ -8,7 +8,6 @@
 #include <assert.h>
 
 #include "Item.h"
-#include "Elemento.h"
 
 class Equipamento : public Item
 {
@@ -18,8 +17,6 @@ protected:
 	int bonus_Def;
 	int bonus_Mag;
 	int bonus_Vel;
-	//Elemento* Efeito_elemental;
-
 
 public:
 	Equipamento(string nome = "Equipamento", string descricao = "**********");

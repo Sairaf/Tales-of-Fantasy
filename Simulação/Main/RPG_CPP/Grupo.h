@@ -2,12 +2,13 @@
 #include <iostream>
 #include <stdlib.h>
 #include <typeinfo>
+#include <vector>
+
 #include "Heroi.h"
 #include "Guerreiro.h"
 #include "Mago.h"
 #include "Ladino.h"
 #include "Item.h"
-#include <vector>
 #include "Monstro.h"
 using namespace std;
 
@@ -15,13 +16,11 @@ class Grupo
 {
   friend ostream& operator<<(ostream&, const Grupo&);
   protected:
-    const  int MAX_HEROIS = 4;
+    const  int MAX_HEROIS = 3;
     const  int MAX_ITENS = 99;
-    int num_Herois;
-    int num_Itens;
-    int dinheiro;
-    Heroi* grupo;
-    Item* inventario;
+	vector <Heroi*>* equipe;
+	vector <Item*>* inventario;
+	vector <int>* teste;
   public:
     Grupo();
     Grupo(Heroi*,Item*);
@@ -43,4 +42,3 @@ class Grupo
 
 
 };
-

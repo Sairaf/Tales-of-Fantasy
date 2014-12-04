@@ -5,11 +5,9 @@
 #include <vector>
 #include <list>
 #include <iostream>
-#include <assert.h>
 
 #include "Equipamento.h"
-#include "Elemento.h"
-#include "Gelo.h"
+
 using namespace std;
 
 
@@ -21,7 +19,7 @@ class Acessorio : public Equipamento
 
  public:
 	Acessorio(int atk = 0);
-	Acessorio(const string& nome,const string& descricao,const int& b_Atk,const int& b_Def,const int& b_Mag,const int& b_Vel, const Elemento&);
+	Acessorio(const string& nome,const string& descricao,const int& b_Atk,const int& b_Def,const int& b_Mag,const int& b_Vel, const string&);
 	Acessorio(const Acessorio&);
 	~Acessorio();
 
@@ -29,7 +27,7 @@ class Acessorio : public Equipamento
 
 //	Elemento* getElemento() const;
 
-	Elemento* operator=(const Elemento&);
+	Acessorio* operator=(const string&);
     virtual void Add_Elemento(const int&) = 0;
 };
 

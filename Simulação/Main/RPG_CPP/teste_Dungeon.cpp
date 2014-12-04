@@ -1,4 +1,4 @@
-#include <locale>
+/*#include <locale>
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -166,4 +166,4 @@ void Menu(int dungeon[][TAM], Posicao pos_Heroi){
  dungeon[pos_Heroi.c_Y][pos_Heroi.c_X] = 5;
 // system("cls");
  Imprimir(dungeon);
-}
+}*/

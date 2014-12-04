@@ -2,7 +2,7 @@
 FileName=RPG_CPP.dev
 Name=RPG_CPP
 Type=1
-Ver=1
+Ver=2
 ObjFiles=
 Includes=
 Libs=
@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000001000000
-UnitCount=31
+UnitCount=29
 
 [VersionInfo]
 Major=1
@@ -250,20 +250,10 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit27]
-FileName=Raio_De_Gelo.cpp
-CompileCpp=1
-Folder=RPG_CPP
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit28]
-FileName=Raio_De_Gelo.h
+FileName=Espada.h
 CompileCpp=1
-Folder=RPG_CPP
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -271,9 +261,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit29]
-FileName=teste_Dungeon.cpp
+FileName=Espada.cpp
 CompileCpp=1
-Folder=RPG_CPP
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -392,6 +382,16 @@ BuildCmd=
 
 [Unit9]
 FileName=Equipamento.h
+CompileCpp=1
+Folder=RPG_CPP
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit27]
+FileName=teste_Dungeon.cpp
 CompileCpp=1
 Folder=RPG_CPP
 Compile=1

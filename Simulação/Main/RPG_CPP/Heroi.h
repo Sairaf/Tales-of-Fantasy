@@ -14,6 +14,7 @@
 
 class Heroi
 {
+ friend ostream& operator<<(ostream&, const Heroi&);
 protected:
 	string nomeHeroi;
 	string descricao;

@@ -14,7 +14,7 @@
 class Mago : public Heroi
 {
 protected:
-	Magia* lista_Magias;
+	Magia** lista_Magias;
     int num_Magia;
 
 public:
@@ -27,8 +27,7 @@ public:
 	void set_Magia_Mago(const Magia&);
 
 	Magia* get_Magias_Mago() const;
-	Magia  get_Magia_Mago(const int&) const;
-
+	
 	void Equipar(const Equipamento&);
 	void Subir_De_Nivel(const int&);
 	void Adicionar_Magia(const Magia&);

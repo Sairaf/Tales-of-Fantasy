@@ -15,73 +15,32 @@
 
 Grupo::Grupo()
 {
- this->num_Herois = 0;
- this->num_Itens = 0;
- this->grupo = 0;
- this->inventario = 0;
+ this->teste = new vector<int>;
+ this->equipe = new vector<Heroi*>;
+ this->inventario = new vector<Item*>;
 
 }
 
 
 Grupo::Grupo(const Grupo& grupo_Cpy)
 {
- this->grupo = grupo_Cpy.grupo;
+ this->equipe = grupo_Cpy.equipe;
  this->inventario = grupo_Cpy.inventario;
 }
 
 Grupo::Grupo(Heroi* grupo,Item* inventario){
-this->grupo = grupo;
-this->inventario = inventario;
-}
-
-void Heroi::Verificar_Tipo_Heroi(const Heroi& heroi){
- string tipo = typeid(heroi).name();
+this->equipe->push_back(grupo);
+this->inventario->push_back(inventario);
 }
 
 
 void Grupo::set_Heroi(Heroi* heroi){
-    int i;
-    if(this->num_Herois <this->MAX_HEROIS){
-    Heroi* aux;
-      if(this->num_Herois == 0){
-        ++this->num_Herois;
-        if(dynamic_cast<Guerreiro*>(heroi) != NULL){
-          aux[0] = heroi[0];
-          heroi = dynamic_cast <Guerreiro*>(aux);
-          this->grupo[this->num_Herois-1] = heroi[0];
-        }else if(dynamic_cast<Mago*>(heroi) != NULL){
-
-          aux[0] = heroi[0];
-          heroi = dynamic_cast <Mago*>(aux);
-          this->grupo[this->num_Herois-1] = heroi[0];
-        }else if(dynamic_cast<Ladino*>(heroi) != NULL){
-
-          aux[0] = heroi[0];
-          heroi = dynamic_cast <Ladino*>(aux);
-          this->grupo[this->num_Herois-1] = heroi[0];
-        }else{
-        cout << "Ponteiro invalido" << endl;
-        }
-     }else{
-        for(i = 0; i < this->num_Herois; i++){
-         if(dynamic_cast<Guerreiro*>(&this->grupo[i]) != NULL){
-
-          aux[i] = this->grupo[i];
-        }else if(dynamic_cast<Mago*>(&this->grupo[i]) != NULL){
-
-          aux[i] = this->grupo[i];
-        }else if(dynamic_cast<Ladino*>(&this->grupo[i]) != NULL){
-
-          aux[i] = this->grupo[i];
-        }
-    }
-    delete [] aux;
-    delete [] this->grupo ;
-  }
- }else{
-  cout << "Tipo invalido ou o grupo esta cheio"  << endl;
+   if(this->equipe->size() < 3)
+    this->equipe->push_back(heroi);
+   else
+    cout << "heroi invalido" << endl;
  }
-}
+
 
 void Grupo::set_Item(const Item& item){
 /* if(item != NULL && this->inventario.size() < this->MAX_Itens)
@@ -103,11 +62,11 @@ ostream& operator<<(ostream& output, const Grupo& grupo)
  int i ;
  for(i = 0; i < grupo.MAX_HEROIS; i++)
  {
-  output << grupo.grupo << endl;
+  output << grupo[i].teste<< endl;
  }
  for(i = 0; i < grupo.MAX_ITENS; i++)
  {
-  output << grupo.inventario[i] << endl;
+  output << "Jaspion"/*grupo.inventario[i] */<< endl;
  }
 }
 

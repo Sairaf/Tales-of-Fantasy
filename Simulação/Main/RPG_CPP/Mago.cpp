@@ -12,10 +12,10 @@ Mago::Mago(const string& nome,const string& descricao, const int& hp, const int&
  this->lista_Magias = new Magia;
 }
 
-void Mago::Adicionar_Magia( const Magia& magia)
+void Mago::Adicionar_Magia(Magia* magia)
 {
  int i = 0;
- Magia* aux_Magia = new Magia[this->num_Magia];
+ Magia** aux_Magia = new Magia*[this->num_Magia];
  if(this->num_Magia == 0){
  ++this->num_Magia;
  this->lista_Magias[this->num_Magia-1] == magia;
@@ -26,7 +26,7 @@ void Mago::Adicionar_Magia( const Magia& magia)
 
  delete [] this->lista_Magias;
 
- this->lista_Magias = new Magia[++this->num_Magia];
+ this->lista_Magias = new Magia*[++this->num_Magia];
 
   for(i = 0; i < this->num_Magia-1; i++)
     this->lista_Magias[i] = aux_Magia[i];
@@ -34,7 +34,7 @@ void Mago::Adicionar_Magia( const Magia& magia)
     this->lista_Magias[this->num_Magia-1] = magia;
 
  }
-
+  delete [] aux_Magia;
 }
 
 void Mago::Subir_De_Nivel(const int& experiencia)
@@ -68,6 +68,7 @@ void Mago::Subir_De_Nivel(const int& experiencia)
 
 void Mago::Equipar(const Equipamento& equipamento)
 {
+
 }
 
 

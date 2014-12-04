@@ -1,39 +1,28 @@
 # Project: RPG_CPP
-# Makefile created by Dev-C++ 4.9.9.2
+# Makefile created by Dev-C++ 5.7.1
 
-CPP  = g++.exe
-CC   = gcc.exe
-WINDRES = windres.exe
-RES  = 
-OBJ  = Acessorio.o Arma.o Armadura.o Equipamento.o Guerreiro.o Heroi.o Item.o Ladino.o Magia.o Mago.o main.o Menu.o Monstro.o Raio_De_Gelo.o teste_Dungeon.o Espada.o $(RES)
-LINKOBJ  = Acessorio.o Arma.o Armadura.o Equipamento.o Guerreiro.o Heroi.o Item.o Ladino.o Magia.o Mago.o main.o Menu.o Monstro.o Raio_De_Gelo.o teste_Dungeon.o Espada.o $(RES)
-LIBS =  -L"C:/Dev-Cpp/lib"  -fmessage-length=0 
-INCS =  -I"C:/Dev-Cpp/include" 
-CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
-BIN  = RPG_CPP.exe
-CXXFLAGS = $(CXXINCS)   -fmessage-length=0
-CFLAGS = $(INCS)   -fmessage-length=0
-RM = rm -f
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Equipamento.o Guerreiro.o Heroi.o Item.o Ladino.o Magia.o Mago.o main.o Menu.o Monstro.o teste_Dungeon.o
+LINKOBJ  = Equipamento.o Guerreiro.o Heroi.o Item.o Ladino.o Magia.o Mago.o main.o Menu.o Monstro.o teste_Dungeon.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include/c++"
+BIN      = RPG_CPP.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
 
-all: all-before RPG_CPP.exe all-after
-
+all: all-before $(BIN) all-after
 
 clean: clean-custom
 	${RM} $(OBJ) $(BIN)
 
 $(BIN): $(OBJ)
-	$(CPP) $(LINKOBJ) -o "RPG_CPP.exe" $(LIBS)
-
-Acessorio.o: Acessorio.cpp
-	$(CPP) -c Acessorio.cpp -o Acessorio.o $(CXXFLAGS)
-
-Arma.o: Arma.cpp
-	$(CPP) -c Arma.cpp -o Arma.o $(CXXFLAGS)
-
-Armadura.o: Armadura.cpp
-	$(CPP) -c Armadura.cpp -o Armadura.o $(CXXFLAGS)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
 Equipamento.o: Equipamento.cpp
 	$(CPP) -c Equipamento.cpp -o Equipamento.o $(CXXFLAGS)
@@ -65,11 +54,5 @@ Menu.o: Menu.cpp
 Monstro.o: Monstro.cpp
 	$(CPP) -c Monstro.cpp -o Monstro.o $(CXXFLAGS)
 
-Raio_De_Gelo.o: Raio_De_Gelo.cpp
-	$(CPP) -c Raio_De_Gelo.cpp -o Raio_De_Gelo.o $(CXXFLAGS)
-
 teste_Dungeon.o: teste_Dungeon.cpp
 	$(CPP) -c teste_Dungeon.cpp -o teste_Dungeon.o $(CXXFLAGS)
-
-Espada.o: Espada.cpp
-	$(CPP) -c Espada.cpp -o Espada.o $(CXXFLAGS)

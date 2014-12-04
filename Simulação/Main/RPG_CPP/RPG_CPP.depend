@@ -232,3 +232,131 @@
 	<string>
 	"Cidade.h"
 
+1417433646 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\armadura.cpp
+	"Armadura.h"
+
+1417433646 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\armadura.h
+	<string>
+	<vector>
+	<list>
+	<iostream>
+	<assert.h>
+	"Equipamento.h"
+
+1417697202 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\equipamento.h
+	<string>
+	<vector>
+	<list>
+	<iostream>
+	<assert.h>
+	"Item.h"
+
+1417433646 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.h
+	<string>
+	<vector>
+	<list>
+	<iostream>
+	<assert.h>
+
+1417433646 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\cidade.cpp
+	"Cidade.h"
+
+1417433646 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\cidade.h
+	<iostream>
+	<cstdlib>
+	<stdlib.h>
+	<string>
+	<vector>
+	<string.h>
+
+1417433646 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\equipamento.cpp
+	"Equipamento.h"
+
+1417433646 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.cpp
+	"Heroi.h"
+
+1417703391 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.h
+	<string>
+	<vector>
+	<list>
+	<iostream>
+	<assert.h>
+	"Armadura.h"
+	"Equipamento.h"
+	"Arma.h"
+	"Acessorio.h"
+
+1417697348 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\arma.h
+	<string>
+	<vector>
+	<list>
+	<iostream>
+	<assert.h>
+	"Equipamento.h"
+
+1417699928 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\acessorio.h
+	<string>
+	<vector>
+	<list>
+	<iostream>
+	"Equipamento.h"
+
+1417433646 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.cpp
+	"Item.h"
+
+1417433646 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\ladino.cpp
+	"Ladino.h"
+
+1417433646 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\ladino.h
+	<string>
+	<vector>
+	<list>
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	"monstro.h"
+	"Equipamento.h"
+	"Heroi.h"
+
+1417433646 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.h
+	<string>
+	<vector>
+	<list>
+	<iostream>
+	<string.h>
+	"Magia.h"
+
+1417433646 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\magia.h
+	<string>
+	<vector>
+	<list>
+	<iostream>
+
+1417433646 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\magia.cpp
+	"Magia.h"
+
+1417433646 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\menu.cpp
+	"Menu.h"
+
+1417433646 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\menu.h
+	<iostream>
+	<cstdlib>
+
+1417433646 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.cpp
+	"Monstro.h"
+
+1417433646 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\sepolopolis.cpp
+	"Sepolopolis.h"
+
+1417433646 c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\sepolopolis.h
+	<iostream>
+	<cstdlib>
+	<string>
+	"Cidade.h"
+
+1417697114 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\acessorio.cpp
+	"Acessorio.h"
+
+1417699961 source:c:\users\propespinfo\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\arma.cpp
+	"Arma.h"
+

@@ -18,30 +18,6 @@ Guerreiro::~Guerreiro(){
   delete [] this->Tecnica;
 }
 
-void Guerreiro::Adicionar_Tecnica(const Magia& magia)
-{
- int i = 0;
- Magia* aux_Magia = new Magia[this->num_Magia];
- if(this->num_Magia == 0){
-   ++this->num_Magia;
-   this->Tecnica[this->num_Magia-1] = magia;
- }else{
-
-  for(i = 0; i < this->num_Magia; i++)
-    aux_Magia[i] = this->Tecnica[i];
-
- delete [] this->Tecnica;
-
- this->Tecnica = new Magia[++this->num_Magia];
-
-  for(i = 0; i < this->num_Magia-1; i++)
-    this->Tecnica[i] = aux_Magia[i];
-
-    this->Tecnica[this->num_Magia-1] = magia;
-
- }
-  delete []  aux_Magia;
-}
 
 void Guerreiro::Subir_De_Nivel(const int& experiencia)
 {
