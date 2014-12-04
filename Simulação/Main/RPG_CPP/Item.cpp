@@ -5,13 +5,15 @@ Item::Item(string nome, string descricao)
 :nome_Item(nome), descricao_Item(descricao)
 {
   this->durabilidade = 5;
+  this->consumivel = true;
 }
 
-Item::Item(const string& nome,const string& descricao, const int& durabilidade)
+Item::Item(const string& nome,const string& descricao, const int& durabilidade, const bool& consumivel)
 {
   this->nome_Item = nome;
   this->descricao_Item = descricao;
   this->durabilidade = durabilidade;
+  this->consumivel = true;
 }
 
 Item::~Item()
@@ -22,6 +24,7 @@ Item::Item(const Item& item_Cpy){
   this->nome_Item = item_Cpy.nome_Item;
   this->descricao_Item = item_Cpy.descricao_Item;
   this->durabilidade = item_Cpy.durabilidade;
+  this->consumivel = item_Cpy.consumivel;
 }
 
 void Item::set_Nome_Item(const string& nome){
@@ -56,6 +59,12 @@ int Item::get_Durabilidade() const{
   return this->durabilidade;
 }
 
+void Item::Diminuir_Durabilidade(){
+  if(this->consumivel == true)
+    this->durabilidade-=1;
+  else
+    cout << "Este item pode ser utilizado diversas vezes";
+}
 
 ostream& operator<<(ostream& output, const Item& item){
  output << "Nome do item" << item.get_Nome_Item() << endl;

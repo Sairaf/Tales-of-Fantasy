@@ -34,7 +34,7 @@ public:
        bool operator==(const Magia&);
        Magia* operator=(const Magia&);
        bool operator!=(const Magia&);
-       void Add_Poder(const int&);
+       virtual void Efeito() = 0;
 };
 
 
