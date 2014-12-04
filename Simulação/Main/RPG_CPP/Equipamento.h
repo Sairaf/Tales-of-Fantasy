@@ -23,7 +23,7 @@ public:
 	Equipamento(int bonus = 0);
 	Equipamento(const Equipamento&);
 	Equipamento(const string& nome,const string& descricao, int b_Atk, int b_Def, int b_Mag, int b_Vel);
-	~Equipamento();
+	virtual ~Equipamento();
 
 	void setAtk(const int&);
 	void setDef(const int&);

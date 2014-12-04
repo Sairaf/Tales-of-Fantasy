@@ -20,7 +20,7 @@ public:
 	Armadura(const int& b_Defesa = 0);
 	Armadura(const string&, const string&, const int&,const int&,const int&,const int&,const int&);
 	Armadura(const Armadura&);
-	~Armadura();
+	virtual ~Armadura();
 
 	void set_P_Def(const int&);
 	int get_P_Def() const;

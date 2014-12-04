@@ -38,7 +38,7 @@ public:
 	Heroi(string nome = "HERO", string descricai = "UM HEROI");
 	Heroi(const string& ,const string&, const int&, const int&, const int&, const int&, const int&, const int&);
 	Heroi(const Heroi&);
-	~Heroi();
+	virtual~Heroi();
 
 	void set_Nome_Heroi(const string&);
 	void set_Descricao_Heroi(const string&);
@@ -64,9 +64,11 @@ public:
     bool operator!=(const int&);
     bool operator==(const Heroi&);
     bool operator!=(const Heroi&);
+
     Heroi* operator=(const Heroi&);
 	virtual void Subir_De_Nivel(const int&) = 0;
-//	virtual void Equipar(Equipamento equipamento) = 0;
+	virtual void Equipar(const Equipamento& equipamento) = 0;
+	virtual void Def_Stats() = 0;
     void Verificar_Tipo_Heroi(const Heroi&);
 };
 

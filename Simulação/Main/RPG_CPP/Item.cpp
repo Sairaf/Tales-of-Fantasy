@@ -56,8 +56,16 @@ int Item::get_Durabilidade() const{
   return this->durabilidade;
 }
 
+
 ostream& operator<<(ostream& output, const Item& item){
  output << "Nome do item" << item.get_Nome_Item() << endl;
  output << "Descricao do item" << item.get_Descricao_Item() << endl;
  output << "Durabilidade" << item.get_Durabilidade() << endl;
 }
+/*
+ostream& operator<<(ostream& output, const Item* item){
+ output << "Nome do item" << item.get_Nome_Item() << endl;
+ output << "Descricao do item" << item.get_Descricao_Item() << endl;
+ output << "Durabilidade" << item.get_Durabilidade() << endl;
+}
+*/

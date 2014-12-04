@@ -1,10 +1,19 @@
-/*#include <locale>
+#include <locale>
 #include <iostream>
 #include <cstdlib>
 #include <string>
 #include <string.h>
 #include <conio.h>
 #include <vector>
+#include "Heroi.h"
+#include "Mago.h"
+#include "Guerreiro.h"
+#include "Ladino.h"
+#include "Item.h"
+#include "monstro.h"
+#include "Cidade.h"
+#include "Grupo.h"
+
 #define TAM 5
 
 using namespace std;
@@ -19,7 +28,7 @@ typedef struct {
 void Imprimir(int [][TAM]);
 int Pesquisar(int [][TAM], int);
 Posicao get_Pos(int [][TAM]);
-void Menu(int [][TAM],Posicao heroi_Pos);
+void Menu(int [][TAM],Posicao heroi_Pos, Grupo&);
 
 int main(){
     //                     1 2 3 4 5
@@ -28,12 +37,12 @@ int main(){
                           {1,0,4,0,1},
                           {1,2,0,0,1},
                           {1,1,1,1,1}};
-
+ Grupo grupo;
  Posicao heroi_Pos;
  string opcao;
  int aux;
  while(1 < 10)
-  Menu(dungeon, heroi_Pos);
+  Menu(dungeon, heroi_Pos, grupo);
 
 
  system("pause");
@@ -112,7 +121,7 @@ Posicao get_Pos(int dungeon [][TAM]){
 }
 
 
-void Menu(int dungeon[][TAM], Posicao pos_Heroi){
+void Menu(int dungeon[][TAM], Posicao pos_Heroi, Grupo& grupo){
 
   system("cls");
   pos_Heroi = get_Pos(dungeon);
@@ -122,7 +131,7 @@ void Menu(int dungeon[][TAM], Posicao pos_Heroi){
   string opcao;
   cout << "Escolha qual posicao queres andar" <<endl;
   cout << "U - cima; D-Baixo; L-Esquerda;R-Direita" << endl;
-  cout << "Q - Sair" << endl;
+  cout << "Q - Sair; M - Menu" << endl;
   cin >> opcao;
 
 
@@ -160,10 +169,15 @@ void Menu(int dungeon[][TAM], Posicao pos_Heroi){
    }
   }else if(opcao.compare("Q") == 0){
     exit(1);
+  }else if(opcao.compare("M") == 0){
+    grupo.Menu();
+    getch();
+    system("cls");
   }else{
   cout  << "Opcao invalida" << endl;
+  getch();
  }
  dungeon[pos_Heroi.c_Y][pos_Heroi.c_X] = 5;
 // system("cls");
  Imprimir(dungeon);
-}*/
+}

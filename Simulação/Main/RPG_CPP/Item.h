@@ -12,6 +12,7 @@ using namespace std;
 class Item
 {
 friend ostream& operator<<(ostream&, const Item&);
+friend ostream& operator<<(ostream&, const Item*);
 protected:
 	string nome_Item;
 	string descricao_Item;
@@ -21,7 +22,7 @@ public:
 	Item(string nome = "Item", string descricao = "Um item");
 	Item(const string& nome,const string& descricao, const int& durabilidade);
 	Item(const Item&);
-	~Item();
+	virtual  ~Item();
 
 	void set_Nome_Item(const string&);
 	void set_Descricao_Item(const string&);

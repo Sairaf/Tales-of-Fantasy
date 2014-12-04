@@ -16,11 +16,12 @@ class Grupo
 {
   friend ostream& operator<<(ostream&, const Grupo&);
   protected:
-    const  int MAX_HEROIS = 3;
-    const  int MAX_ITENS = 99;
+    int MAX_HEROIS;
+    int MAX_ITENS;
 	vector <Heroi*>* equipe;
 	vector <Item*>* inventario;
 	vector <int>* teste;
+	vector <int> teste2;
   public:
     Grupo();
     Grupo(Heroi*,Item*);

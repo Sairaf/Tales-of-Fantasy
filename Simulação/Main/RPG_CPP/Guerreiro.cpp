@@ -3,19 +3,15 @@
 Guerreiro::Guerreiro(string nome, string descricao)
 :Heroi(nome,descricao)
 {
-  this->num_Magia = 0;
-  this->Tecnica = new Magia();
-
 }
 
 Guerreiro::Guerreiro(const string& nome,const string& descricao,const int& hp,const int& mp,const int& ataque,const int& defesa, const int& magia,const int& velocidade)
 :Heroi(nome, descricao, hp, mp, ataque, defesa, magia, velocidade)
 {
- this->Tecnica = new Magia();
 }
 
 Guerreiro::~Guerreiro(){
-  delete [] this->Tecnica;
+
 }
 
 
@@ -33,7 +29,7 @@ void Guerreiro::Subir_De_Nivel(const int& experiencia)
   this->defesa = 3 + b_Random -1;
   this->magia = b_Random;
   this->velocidade = 1 + b_Random;
-  this->pontosExperiencia*= 1.25;
+  this->pontosExperiencia+= this->pontosExperiencia/10;
  }else if(this->pontosExperiencia < 0 && this->lv_Atual <= MAX_LV){
   this->lv_Atual++;
   this->HP = 35 + b_Random;
@@ -42,7 +38,7 @@ void Guerreiro::Subir_De_Nivel(const int& experiencia)
   this->defesa = 3 + b_Random -1;
   this->magia = b_Random;
   this->velocidade = 1 + b_Random;
-  this->pontosExperiencia*= 1.25;
+  this->pontosExperiencia+= this->pontosExperiencia/10;
   this->Subir_De_Nivel(excedente);
  }
 }

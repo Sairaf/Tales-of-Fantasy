@@ -22,7 +22,7 @@ public:
 
 	Guerreiro(string nome = "Guerreiro", string descricao = "Descricao");
 	Guerreiro(const string& ,const string&, const int&, const int&, const int&, const int&, const int&, const int&);
-	~Guerreiro();
+	virtual ~Guerreiro();
 	Guerreiro(const Guerreiro&);
 
  	void Equipar(const Equipamento&);

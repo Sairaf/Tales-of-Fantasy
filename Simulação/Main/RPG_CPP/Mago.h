@@ -6,7 +6,7 @@
 #include <list>
 #include <time.h>
 #include <stdlib.h>
-
+#include <math.h>
 #include "Equipamento.h"
 #include "Magia.h"
 #include "Heroi.h"
@@ -24,13 +24,12 @@ public:
 	Mago(const Mago&);
 	~Mago();
 
-	void set_Magia_Mago(const Magia&);
+	void set_Magia_Mago(Magia*);
 
 	Magia* get_Magias_Mago() const;
-	
+
 	void Equipar(const Equipamento&);
 	void Subir_De_Nivel(const int&);
-	void Adicionar_Magia(const Magia&);
  	void Def_Stats();
 };
 

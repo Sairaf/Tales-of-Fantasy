@@ -31,7 +31,7 @@ public:
 	Monstro(string nome = "Monstro", string descricao = "Descricao");
 	Monstro(const string&,const string&, const int&, const int&,const int&,const int&,const int&,const int&);
 	Monstro(const Monstro&);
-	~Monstro();
+	virtual ~Monstro();
 
 	void set_Nome_Monstro(const string&);
 	void set_Descricao_Monstro(const string&);

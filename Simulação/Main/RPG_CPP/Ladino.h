@@ -18,11 +18,13 @@ public:
 	Ladino(string nome = "Ladino", string descricao = "Ladino");
 	Ladino(const string& ,const string&, const int&, const int&, const int&, const int&, const int&, const int&);
 	Ladino(const Ladino&);
-	~Ladino();
+	virtual ~Ladino();
 
-	void Equipar(const Equipamento&);
-    void Roubar(const Monstro&);
+    void Roubar(Monstro&);
+
+	void Equipar(Equipamento&);
     void Subir_De_Nivel(const int&);
+    void Def_Stats();
 };
 
 

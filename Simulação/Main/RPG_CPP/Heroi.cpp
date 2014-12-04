@@ -8,9 +8,9 @@ Heroi::Heroi(string nome, string descricao)
  this->HP = 100;
  this->MP = 100;
  this->ataque = 5;
- int defesa = 5;
- int velocidade = 5;
- int magia = 5;
+ this->defesa = 5;
+ this->velocidade = 5;
+ this->magia = 5;
 }
 
 Heroi::Heroi(const string& nome, const string& descricao,const int& hp,const int& mp,const int& ataque,const int& defesa,const int& magia,const int& velocidade)

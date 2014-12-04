@@ -41,6 +41,11 @@ void Grupo::set_Heroi(Heroi* heroi){
     cout << "heroi invalido" << endl;
  }
 
+Grupo::~Grupo(){
+delete [] this->equipe;
+delete [] this->inventario;
+
+}
 
 void Grupo::set_Item(const Item& item){
 /* if(item != NULL && this->inventario.size() < this->MAX_Itens)
@@ -62,12 +67,13 @@ ostream& operator<<(ostream& output, const Grupo& grupo)
  int i ;
  for(i = 0; i < grupo.MAX_HEROIS; i++)
  {
-  output << grupo[i].teste<< endl;
+  output << grupo.teste2[i]<< endl;
  }
  for(i = 0; i < grupo.MAX_ITENS; i++)
  {
   output << "Jaspion"/*grupo.inventario[i] */<< endl;
  }
+ return output;
 }
 
 void Grupo::Text_Menu()
@@ -89,20 +95,30 @@ void Grupo::Menu()
 
 
   case 1:
-
-  cout <<"--------------------------------- <<" << endl ;
-  cout <<"|           Inventario           |" << endl;
-  cout <<"--------------------------------- <<" <<endl ;
-  for(i = 0; i <this->num_Itens-1;i++)
-  {
-   cout << "|" << i << " "<< this->inventario[i] << "|" << i+1 << " " << this->inventario[i+1] <<endl;
-  }
+    cout << endl << endl;
+    cout <<"--------------------------------- <<" << endl ;
+    cout <<"|           Inventario           |" << endl;
+    cout <<"--------------------------------- <<" <<endl ;
+    for(i = 0; i <(int)this->inventario->size();i++)
+    {
+     cout << "A implementar" << endl;
+    //cout << "|" << i << " "<< this->inventario[i] << "|" << i+1 << " " << this->inventario[i+1] <<endl;
+    }
   break;
-
   case 2:
+    cout << endl << endl;
+    cout <<"--------------------------------- <<" << endl ;
+    cout <<"|           Inventario           |" << endl;
+    cout <<"--------------------------------- <<" <<endl ;
+    for(i = 0; i <(int)this->inventario->size();i++)
+    {
+     cout << "A implementar" << endl;
+     //cout << "|" << i << " "<< this->inventario[i] << "|" << i+1 << " " << this->inventario[i+1] <<endl;
+    }
   break;
-  case3:
-
+  case 3:
+     system("cls");
+     cout << "" << endl;
   break;
   default:
   system("cls");
@@ -113,7 +129,7 @@ void Grupo::Menu()
 }
 
 Grupo* Grupo::operator=(const Grupo& grupo){
-    this->grupo = grupo.grupo;
+    this->equipe = grupo.equipe;
     this->inventario = grupo.inventario;
     return this;
 }
