@@ -35,10 +35,10 @@ this->inventario->push_back(inventario);
 
 
 void Grupo::set_Heroi(Heroi* heroi){
-   if(this->equipe->size() < 3)
+   if(this->equipe->size() < 3 /*this->MAX_HEROIS*/)
     this->equipe->push_back(heroi);
    else
-    cout << "heroi invalido" << endl;
+    cout << "Equipe esta cheia" << endl;
  }
 
 Grupo::~Grupo(){
@@ -47,21 +47,12 @@ delete [] this->inventario;
 
 }
 
-void Grupo::set_Item(const Item& item){
-/* if(item != NULL && this->inventario.size() < this->MAX_Itens)
-   this->inventario.push_back(item);*/
+void Grupo::set_Item(Item* item){
+  if(this->inventario->size() < 99 /*this->MAX_ITENS*/)
+    this->inventario->push_back(item);
+   else
+    cout << "Limite de itens alcançado" << endl;
 }
-/*
-<Heroi> Grupo::get_Grupo() const{
-
- return this->grupo;
-}
-
-<Item> Grupo::get_Inventario() const{
-
- return this->inventario;
-}
-*/
 ostream& operator<<(ostream& output, const Grupo& grupo)
 {
  int i ;
@@ -97,13 +88,14 @@ void Grupo::Menu()
   case 1:
     cout << endl << endl;
     cout <<"--------------------------------- <<" << endl ;
-    cout <<"|           Inventario           |" << endl;
+    cout <<"|           Grupo           |" << endl;
     cout <<"--------------------------------- <<" <<endl ;
     for(i = 0; i <(int)this->inventario->size();i++)
     {
      cout << "A implementar" << endl;
     //cout << "|" << i << " "<< this->inventario[i] << "|" << i+1 << " " << this->inventario[i+1] <<endl;
     }
+    cout << "Voce tem" << this->inventario->size() << " Itens" << endl;
   break;
   case 2:
     cout << endl << endl;
@@ -115,6 +107,7 @@ void Grupo::Menu()
      cout << "A implementar" << endl;
      //cout << "|" << i << " "<< this->inventario[i] << "|" << i+1 << " " << this->inventario[i+1] <<endl;
     }
+     cout << "Voce tem" << this->equipe->size() << " integrantes no grupo" << endl;
   break;
   case 3:
      system("cls");

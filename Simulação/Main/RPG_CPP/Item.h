@@ -17,10 +17,10 @@ protected:
 	string nome_Item;
 	string descricao_Item;
 	int durabilidade;
-
+    bool consumivel;
 public:
 	Item(string nome = "Item", string descricao = "Um item");
-	Item(const string& nome,const string& descricao, const int& durabilidade);
+	Item(const string& nome,const string& descricao, const int& durabilidade, const bool&);
 	Item(const Item&);
 	virtual  ~Item();
 
@@ -32,8 +32,8 @@ public:
 	string get_Descricao_Item() const;
 	int    get_Durabilidade() const;
 
-	virtual void Diminuir_Durabilidade() = 0;
-
+	void Diminuir_Durabilidade();
+    virtual void Efeito() = 0;
 };
 
 
