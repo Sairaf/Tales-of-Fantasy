@@ -31,7 +31,7 @@ class Grupo
     void Text_Menu();
     void set_Heroi(Heroi*);
     void set_Dinheiro(const int&);
-    void set_Item(const Item&);
+    void set_Item(Item*);
 
     void get_Dinheiro(const int&);
     void Batalhar(const Monstro&);

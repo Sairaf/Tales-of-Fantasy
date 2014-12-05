@@ -38,7 +38,7 @@
 		<Unit filename="Arma.h" />
 		<Unit filename="Armadura.cpp" />
 		<Unit filename="Armadura.h" />
-		<Unit filename="Batalha.h" />
+		<Unit filename="Camtasia.cpp" />
 		<Unit filename="Camtasia.h" />
 		<Unit filename="Cidade.cpp" />
 		<Unit filename="Cidade.h" />
@@ -52,6 +52,10 @@
 		<Unit filename="Heroi.h" />
 		<Unit filename="Item.cpp" />
 		<Unit filename="Item.h" />
+		<Unit filename="Kuraudo.cpp" />
+		<Unit filename="Kuraudo.h" />
+		<Unit filename="Kuraudo_Mirrors.cpp" />
+		<Unit filename="Kuraudo_Mirrors.h" />
 		<Unit filename="Ladino.cpp" />
 		<Unit filename="Ladino.h" />
 		<Unit filename="Magia.cpp" />
@@ -62,9 +66,10 @@
 		<Unit filename="Menu.h" />
 		<Unit filename="Monstro.cpp" />
 		<Unit filename="Monstro.h" />
-		<Unit filename="Sepolopis.h" />
 		<Unit filename="Sepolopolis.cpp" />
 		<Unit filename="Sepolopolis.h" />
+		<Unit filename="Trovao.cpp" />
+		<Unit filename="Trovao.h" />
 		<Unit filename="teste_Dungeon.cpp" />
 		<Extensions>
 			<code_completion />

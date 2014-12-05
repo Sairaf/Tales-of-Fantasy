@@ -5,33 +5,49 @@ Monstro::Monstro(string nome, string descricao)
 :nome_Monstro(nome), descricao_Monstro(descricao)
 {
 
- this->Habilidades = new Magia;
+ this->magia_Monstro = new vector <Magia*>;
  this->set_HP_Monstro(100);
  this->set_MP_Monstro(100);
+ this->HP_atual = this->HP;
+ this->MP_atual = this->MP;
  this->set_Atk_Monstro(10);
  this->set_Def_Monstro(10);
  this->set_Mag_Monstro(5);
  this->set_Vel_Monstro(5);
+ this->drop = new Item*;
 }
 
 Monstro::Monstro(const string& nome,const string& descricao_Monstro, const int& hp, const int& mp, const int& ataque, const int& defesa, const int& magia, const int& velocidade)
 {
- this->Habilidades = new Magia;
+ this->magia_Monstro = new vector <Magia*>;
  this->set_HP_Monstro(100);
  this->set_MP_Monstro(100);
+ this->HP_atual = this->HP;
+ this->MP_atual = this->MP;
  this->set_Atk_Monstro(10);
  this->set_Def_Monstro(10);
  this->set_Mag_Monstro(5);
  this->set_Vel_Monstro(5);
+ this->drop = new Item*;
 }
 
 Monstro::~Monstro()
 {
- delete [] this->Habilidades;
+ delete [] this->magia_Monstro;
+ delete [] this->drop;
 }
 
-void Monstro::Add_Skill(Magia magia)
-{
+Monstro::Monstro(const Monstro& monstro_Cpy){
+ this->magia_Monstro = monstro_Cpy.magia_Monstro;
+ this->HP = monstro_Cpy.HP;
+ this->HP_atual = monstro_Cpy.HP_atual;
+ this->MP = monstro_Cpy.MP;
+ this->MP_atual = monstro_Cpy.MP_atual;
+ this->ataque = monstro_Cpy.ataque;
+ this->defesa = monstro_Cpy.defesa;
+ this->magia = monstro_Cpy.magia;
+ this->velocidade = monstro_Cpy.velocidade;
+ this->drop = monstro_Cpy.drop;
 }
 
 
@@ -90,27 +106,7 @@ void Monstro::set_Vel_Monstro(const int& vel){
      this->velocidade = 5;
 }
 
-void Monstro::set_Habilidade_Monstro(const Magia&magia){
-  int i = 0;
-  Magia* aux_Magia  = new Magia();
+void Monstro::set_Habilidade_Monstro(Magia* magia){
 
-  if(this->num_Hab == 0){
-   ++this->num_Hab;
-   this->Habilidades[this->num_Hab-1] = magia;
-}else if(this->num_Hab > 0){
-  for(i = 0; i < this->num_Hab; i++){
-    aux_Magia[i] = this->Habilidades[i] ;
-  }
-  delete [] this->Habilidades;
-  this->Habilidades = new Magia[++this->num_Hab];
-
-  for(i = 0; i < this->num_Hab-1; i++){
-     this->Habilidades[i] = aux_Magia[i];
-  }
-
-  this->Habilidades[this->num_Hab-1] = magia;
-
-  delete [] aux_Magia;
- }
 
 }
