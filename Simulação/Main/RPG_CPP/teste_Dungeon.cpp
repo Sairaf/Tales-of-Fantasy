@@ -18,30 +18,6 @@
 
 using namespace std;
 
-/*ofstream out;
-out.open("nome do arquivo.extensao do arquivo", ios::app) //
-/* obs : ios::app faz com o programa ignore todo o restante do arquivo e
-escreva imediatamente após o último dado salvo.
-Por exemplo;
-NUm arquivo temos
-os valores.;
-
-10 15 25 35.
-se quizermos adicionar mais um valor com ios::app ficaria assim
-10 15 25 35 45 55 assim por diante, sem mexer nos dados presentes no arquivo.
-
-out<<nome<<" "<<time<<" "<<forca<<" "<<habilidade<<" \n";
-out.close();
-
- na hora de carregar você faz o mesmo. assim você vai construindo uma tabela.
-Isso é um pouco rudimentar, mas funciona.
-ficaria assim.
-NOME | Time | Força | habilidade
-Jao     | gremio | 25   | 15
-mario   | vasco  | 15   | 35
-
-assim por diante.*/
-
 typedef struct {
   int c_X;
   int c_Y;
@@ -62,8 +38,6 @@ int main(){
                           {1,2,0,0,1},
                           {1,1,1,1,1}};
  Grupo grupo;
- Heroi * hero = new Guerreiro;
- grupo.set_Heroi(hero);
  Posicao heroi_Pos;
  string opcao;
  int aux;
@@ -135,7 +109,7 @@ Posicao get_Pos(int dungeon [][TAM]){
          }
         }
 
- //cout << cont << endl;
+ cout << cont << endl;
 
   if(flag == 0){
    aux.c_X= 0;
@@ -197,6 +171,7 @@ void Menu(int dungeon[][TAM], Posicao pos_Heroi, Grupo& grupo){
     exit(1);
   }else if(opcao.compare("M") == 0){
     grupo.Menu();
+    getch();
     system("cls");
   }else{
   cout  << "Opcao invalida" << endl;

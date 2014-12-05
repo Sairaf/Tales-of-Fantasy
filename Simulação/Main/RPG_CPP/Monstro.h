@@ -7,7 +7,6 @@
 #include <iostream>
 #include <string.h>
 
-#include "Item.h"
 #include "Magia.h"
 
 class Monstro
@@ -15,17 +14,14 @@ class Monstro
 protected:
     string nome_Monstro;
 	string descricao_Monstro;
-	vector <Magia*>* magia_Monstro;
+	Magia* Habilidades;
 	int num_Hab;
 	int HP;
 	int MP;
-	int HP_atual;
-	int MP_atual;
 	int ataque;
 	int defesa;
 	int velocidade;
 	int magia;
-	Item** drop;
 	static const int max_Hp = 99999;
 	static const int max_Mp = 99999;
 
@@ -41,13 +37,12 @@ public:
 	void set_Descricao_Monstro(const string&);
 	void set_HP_Monstro(const int&);
 	void set_MP_Monstro(const int&);
-	void set_HP_Atual_Monstro(const int&);
-	void set_MP_Atual_Monstro(const int&);
 	void set_Atk_Monstro(const int&);
 	void set_Def_Monstro(const int&);
 	void set_Mag_Monstro(const int&);
 	void set_Vel_Monstro(const int&);
-	void set_Habilidade_Monstro(Magia*);
+
+	void set_Habilidade_Monstro(const Magia&);
 
 	string get_Nome_Monstro() const;
 	string get_Descricao_Monstro() const;
@@ -55,15 +50,15 @@ public:
 	int get_MAX_HP_Monstro() const;
 	int get_MP_Monstro() const;
 	int get_MAX_MP_Monstro() const;
-	int get_HP_Atual_Monstro() const;
-	int get_MP_Atual_Monstro() const;
 	int get_Atk_Monstro() const;
 	int get_Def_Monstro() const;
 	int get_Mag_Monstro() const;
 	int get_Vel_Monstro() const;
 	Magia* get_Habilidades_Monstro () const;
+	Magia get_Habilidades_Monstro (const int&) const;
 
-    virtual void Def_Stats() = 0;
+	virtual void Add_Skill(Magia magia) = 0;
+
 };
 
 #endif
