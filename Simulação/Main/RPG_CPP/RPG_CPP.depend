@@ -378,7 +378,7 @@
 	<assert.h>
 	"Item.h"
 
-1417721083 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.h
+1417712520 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.h
 	<string>
 	<vector>
 	<list>
@@ -436,7 +436,7 @@
 	"Magia.h"
 	"Heroi.h"
 
-1417719517 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\magia.h
+1417709440 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\magia.h
 	<string>
 	<vector>
 	<list>
@@ -456,7 +456,7 @@
 1417713771 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.cpp
 	"Heroi.h"
 
-1417721097 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.cpp
+1417712285 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.cpp
 	"Item.h"
 
 1417713814 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\ladino.cpp
@@ -473,13 +473,12 @@
 	"Equipamento.h"
 	"Heroi.h"
 
-1417718523 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.h
+1417712507 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.h
 	<string>
 	<vector>
 	<list>
 	<iostream>
 	<string.h>
-	"Item.h"
 	"Magia.h"
 
 1417709440 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\magia.cpp
@@ -506,7 +505,7 @@
 	<iostream>
 	<cstdlib>
 
-1417719303 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.cpp
+1417709440 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.cpp
 	"Monstro.h"
 
 1417709440 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\sepolopolis.cpp
@@ -518,7 +517,7 @@
 	<string>
 	"Cidade.h"
 
-1417719849 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\teste_dungeon.cpp
+1417715784 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\teste_dungeon.cpp
 	<locale>
 	<iostream>
 	<cstdlib>
@@ -535,10 +534,10 @@
 	"Cidade.h"
 	"Grupo.h"
 
-1417718661 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.cpp
+1417713349 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.cpp
 	"Grupo.h"
 
-1417717893 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.h
+1417711424 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.h
 	<cstdlib>
 	<iostream>
 	<stdlib.h>
@@ -550,40 +549,4 @@
 	"Ladino.h"
 	"Item.h"
 	"Monstro.h"
-
-1417716216 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\kuraudo.c
-
-1417719683 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\kuraudo.cpp
-	"Kuraudo.h"
-
-1417719698 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\kuraudo.h
-	<string>
-	<vector>
-	<list>
-	<iostream>
-	<assert.h>
-	"Monstro.h"
-	"Magia.h"
-
-1417719782 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\camtasia.cpp
-	"Camtasia.h"
-
-1417719745 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\camtasia.h
-	<string>
-	<vector>
-	<list>
-	<iostream>
-	<assert.h>
-	"Monstro.h"
-	"Magia.h"
-
-1417720474 source:c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\trovao.cpp
-	"Trovao.h"
-
-1417720599 c:\users\lab4-pc11\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\trovao.h
-	<string>
-	<vector>
-	<list>
-	<iostream>
-	"Magia.h"
 
