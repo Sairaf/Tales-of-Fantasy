@@ -6,6 +6,7 @@ Monstro::Monstro(string nome, string descricao)
 {
 
  this->magia_Monstro = new vector <Magia*>;
+ this->exp_Ganha = 1000;
  this->set_HP_Monstro(100);
  this->set_MP_Monstro(100);
  this->HP_atual = this->HP;
@@ -17,9 +18,10 @@ Monstro::Monstro(string nome, string descricao)
  this->drop = new Item*;
 }
 
-Monstro::Monstro(const string& nome,const string& descricao_Monstro, const int& hp, const int& mp, const int& ataque, const int& defesa, const int& magia, const int& velocidade)
+Monstro::Monstro(const string& nome,const string& descricao_Monstro, const int& hp, const int& mp, const int& ataque, const int& defesa, const int& magia, const int& velocidade, const int& exp)
 {
  this->magia_Monstro = new vector <Magia*>;
+ this->exp_Ganha = exp;
  this->set_HP_Monstro(100);
  this->set_MP_Monstro(100);
  this->HP_atual = this->HP;
@@ -39,6 +41,7 @@ Monstro::~Monstro()
 
 Monstro::Monstro(const Monstro& monstro_Cpy){
  this->magia_Monstro = monstro_Cpy.magia_Monstro;
+ this->exp_Ganha = monstro_Cpy.exp_Ganha;
  this->HP = monstro_Cpy.HP;
  this->HP_atual = monstro_Cpy.HP_atual;
  this->MP = monstro_Cpy.MP;

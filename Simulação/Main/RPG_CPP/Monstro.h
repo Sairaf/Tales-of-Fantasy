@@ -25,6 +25,7 @@ protected:
 	int defesa;
 	int velocidade;
 	int magia;
+	int exp_Ganha;
 	Item** drop;
 	static const int max_Hp = 99999;
 	static const int max_Mp = 99999;
@@ -33,7 +34,7 @@ protected:
 
 public:
 	Monstro(string nome = "Monstro", string descricao = "Descricao");
-	Monstro(const string&,const string&, const int&, const int&,const int&,const int&,const int&,const int&);
+	Monstro(const string&,const string&, const int&, const int&,const int&,const int&,const int&,const int&, const int&);
 	Monstro(const Monstro&);
 	virtual ~Monstro();
 
@@ -48,6 +49,7 @@ public:
 	void set_Mag_Monstro(const int&);
 	void set_Vel_Monstro(const int&);
 	void set_Habilidade_Monstro(Magia*);
+    void set_Exp (const int&);
 
 	string get_Nome_Monstro() const;
 	string get_Descricao_Monstro() const;
@@ -62,6 +64,7 @@ public:
 	int get_Mag_Monstro() const;
 	int get_Vel_Monstro() const;
 	Magia* get_Habilidades_Monstro () const;
+    int get_Exp()const;
 
     virtual void Def_Stats() = 0;
 };

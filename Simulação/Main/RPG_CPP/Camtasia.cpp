@@ -1,7 +1,7 @@
 #include "Camtasia.h"
 
 Camtasia::Camtasia()
-:Monstro("Camtasia", "Monstro especializado em enganar suas presas com ilusoes",210, 50, 30,30,30,30)
+:Monstro("Camtasia", "Monstro especializado em enganar suas presas com ilusoes",210, 50, 30,30,30,30,200)
 {
 }
 

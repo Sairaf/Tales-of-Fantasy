@@ -19,7 +19,7 @@ public:
     Camtasia();
     Camtasia(int hp, int mp, int ataque, int defesa, int magia, int velocidade);
 	Camtasia(const Camtasia&);
-	~Camtasia();
+	virtual ~Camtasia();
 
 };
 

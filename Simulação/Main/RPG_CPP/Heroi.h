@@ -69,7 +69,7 @@ public:
 	virtual void Subir_De_Nivel(const int&) = 0;
 	virtual void Equipar(const Equipamento& equipamento) = 0;
 	virtual void Def_Stats() = 0;
-    void Verificar_Tipo_Heroi(const Heroi&);
+
 };
 
 

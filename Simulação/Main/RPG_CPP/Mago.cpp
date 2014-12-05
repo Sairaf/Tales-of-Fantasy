@@ -3,13 +3,13 @@
 Mago::Mago(string nome, string descricao)
 :Heroi(nome, descricao)
 {
- this->lista_Magias = new Magia*;
+ this->lista_Magias = new vector<Magia*>;
 }
 
 Mago::Mago(const string& nome,const string& descricao, const int& hp, const int& mp, const int& ataque, const int& defesa, const int& magia, const int& velocidade)
 :Heroi(nome, descricao, hp, mp, ataque, defesa, magia, velocidade)
 {
- this->lista_Magias = new Magia*;
+  this->lista_Magias = new vector<Magia*>;
 }
 
 Mago::~Mago(){
@@ -18,27 +18,8 @@ Mago::~Mago(){
 
 void Mago::set_Magia_Mago(Magia* magia)
 {
- int i = 0;
- Magia** aux_Magia = new Magia*[this->num_Magia];
- if(this->num_Magia == 0){
- ++this->num_Magia;
- this->lista_Magias[this->num_Magia-1] = magia;
- }else{
-
-  for(i = 0; i < this->num_Magia; i++)
-    aux_Magia[i] = this->lista_Magias[i];
-
- delete [] this->lista_Magias;
-
- this->lista_Magias = new Magia*[++this->num_Magia];
-
-  for(i = 0; i < this->num_Magia-1; i++)
-    this->lista_Magias[i] = aux_Magia[i];
-
-    this->lista_Magias[this->num_Magia-1] = magia;
-
- }
-  delete [] aux_Magia;
+ if(magia != 0)
+     this->lista_Magias->push_back(magia);
 }
 
 void Mago::Subir_De_Nivel(const int& experiencia)

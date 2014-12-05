@@ -15,7 +15,6 @@
 
 Grupo::Grupo()
 {
- this->teste = new vector<int>;
  this->equipe = new vector<Heroi*>;
  this->inventario = new vector<Item*>;
 
@@ -58,7 +57,7 @@ ostream& operator<<(ostream& output, const Grupo& grupo)
  int i ;
  for(i = 0; i < grupo.MAX_HEROIS; i++)
  {
-  output << grupo.teste2[i]<< endl;
+//  output << grupo.teste2[i]<< endl;
  }
  for(i = 0; i < grupo.MAX_ITENS; i++)
  {

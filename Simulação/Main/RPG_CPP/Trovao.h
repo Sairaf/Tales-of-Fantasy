@@ -12,11 +12,11 @@ class Trovao: public Magia
 {
 friend ostream& operator<<(ostream&, const Trovao&);
 public:
-	//Magia(string nome= "Magia", int poder_Magia = 10);
+
 	Trovao();
 	Trovao(const Trovao&);
-	~Trovao();
-
+	virtual ~Trovao();
+    void Efeito() ;
 };
 
 

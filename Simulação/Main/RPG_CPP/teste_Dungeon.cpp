@@ -5,6 +5,7 @@
 #include <string.h>
 #include <conio.h>
 #include <vector>
+#include "Trovao.h"
 #include "Heroi.h"
 #include "Mago.h"
 #include "Guerreiro.h"
@@ -20,7 +21,7 @@ using namespace std;
 
 /*ofstream out;
 out.open("nome do arquivo.extensao do arquivo", ios::app) //
-/* obs : ios::app faz com o programa ignore todo o restante do arquivo e
+ obs : ios::app faz com o programa ignore todo o restante do arquivo e
 escreva imediatamente após o último dado salvo.
 Por exemplo;
 NUm arquivo temos
@@ -42,6 +43,18 @@ mario   | vasco  | 15   | 35
 
 assim por diante.*/
 
+/*
+int main(void)
+{
+ Servico* t = new ServicoStreaming("P", "T");
+
+ServicoStreaming * strPtr = dynamic_cast<ServicoStreaming *>(t);
+if (strPtr != 0)
+{
+ cout << strPtr[0];
+}
+*/
+
 typedef struct {
   int c_X;
   int c_Y;
@@ -55,18 +68,22 @@ Posicao get_Pos(int [][TAM]);
 void Menu(int [][TAM],Posicao heroi_Pos, Grupo&);
 
 int main(){
+
     //                     1 2 3 4 5
  int dungeon[TAM][TAM] = {{0,0,1,1,1},
                           {1,1,0,0,1},
                           {1,0,4,0,1},
                           {1,2,0,0,1},
                           {1,1,1,1,1}};
- Grupo grupo;
- Heroi * hero = new Guerreiro;
- grupo.set_Heroi(hero);
+ Grupo* grupo;
+ Heroi* hero = new Mago;
+ Magia* magia = new Trovao;
+
+ cout << "passou" << endl;
+ grupo->set_Heroi(hero);
+ (Mago*(grupo->equipe[0]))->set_Magia_Mago(magia);
  Posicao heroi_Pos;
  string opcao;
- int aux;
  while(1 < 10)
   Menu(dungeon, heroi_Pos, grupo);
 
@@ -197,6 +214,7 @@ void Menu(int dungeon[][TAM], Posicao pos_Heroi, Grupo& grupo){
     exit(1);
   }else if(opcao.compare("M") == 0){
     grupo.Menu();
+    getch();
     system("cls");
   }else{
   cout  << "Opcao invalida" << endl;

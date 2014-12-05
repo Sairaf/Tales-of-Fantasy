@@ -18,15 +18,14 @@ class Grupo
   protected:
     int MAX_HEROIS;
     int MAX_ITENS;
-	vector <Heroi*>* equipe;
-	vector <Item*>* inventario;
-	vector <int>* teste;
-	vector <int> teste2;
+
   public:
     Grupo();
     Grupo(Heroi*,Item*);
     Grupo(const Grupo&);
     ~Grupo();
+	vector <Heroi*>* equipe;
+	vector <Item*>* inventario;
 
     void Text_Menu();
     void set_Heroi(Heroi*);
