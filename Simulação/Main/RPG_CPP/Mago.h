@@ -14,7 +14,7 @@
 class Mago : public Heroi
 {
 protected:
-	vector<Magia*>* lista_Magias;
+	vector<Magia*> lista_Magias;
     int num_Magia;
 
 public:
@@ -22,15 +22,17 @@ public:
 	Mago(string nome = "Mago", string descricao = " Mago");
 	Mago(const string& ,const string&, const int&, const int&, const int&, const int&, const int&, const int&);
 	Mago(const Mago&);
-	virtual ~Mago();
+	 ~Mago();
 
 	void set_Magia_Mago(Magia*);
 
-	Magia* get_Magias_Mago() const;
+	vector <Magia*> get_Magias_Mago() const;
 
 	void Equipar(const Equipamento&);
 	void Subir_De_Nivel(const int&);
  	void Def_Stats();
+ 	void Menu_ataque();
+ 	void Show_Magics();
 };
 
 

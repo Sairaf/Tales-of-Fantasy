@@ -62,8 +62,8 @@ int Item::get_Durabilidade() const{
 void Item::Diminuir_Durabilidade(){
   if(this->consumivel == true)
     this->durabilidade-=1;
-  else
-    cout << "Este item pode ser utilizado diversas vezes";
+  /*else
+    cout << "Este item pode ser utilizado diversas vezes";*/
 }
 
 ostream& operator<<(ostream& output, const Item& item){

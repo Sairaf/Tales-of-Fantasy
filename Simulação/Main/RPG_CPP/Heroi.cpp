@@ -11,6 +11,7 @@ Heroi::Heroi(string nome, string descricao)
  this->defesa = 5;
  this->velocidade = 5;
  this->magia = 5;
+
 }
 
 Heroi::Heroi(const string& nome, const string& descricao,const int& hp,const int& mp,const int& ataque,const int& defesa,const int& magia,const int& velocidade)
@@ -29,6 +30,7 @@ Heroi::Heroi(const string& nome, const string& descricao,const int& hp,const int
 
 
 Heroi::~Heroi(){
+
 }
 
 void Heroi::set_Nome_Heroi(const string& nome){
@@ -57,6 +59,20 @@ void Heroi::set_MP_Heroi(const int& mp){
    this->MP = mp;
   else
    this->MP = 10;
+}
+
+void Heroi::set_HP_Atual(const int& hp){
+  if(hp>= 0)
+   this->HP_atual = hp;
+  else
+   this->HP = 0;
+}
+
+void Heroi::set_MP_Atual(const int& mp){
+  if(mp>= 0)
+   this->MP_atual = mp;
+  else
+   this->MP = 0;
 }
 
 void Heroi::set_Atk_Heroi(const int& atk){
@@ -97,6 +113,14 @@ string Heroi::get_Descricao_Heroi() const{
 
 int Heroi::get_HP_Heroi() const{
  return this->HP;
+}
+
+int Heroi::get_HP_ATUAL() const{
+ return this->HP_atual;
+}
+
+int Heroi::get_MP_ATUAL() const{
+ return this->MP_atual;
 }
 
 int Heroi::get_MAX_HP_Heroi() const{
@@ -152,6 +176,10 @@ bool Heroi::operator==(const Heroi& heroi){
 
 bool Heroi::operator!=(const Heroi& heroi){
   return !(this->nomeHeroi == heroi.nomeHeroi);
+}
+
+bool Heroi::operator<(const Heroi& heroi){
+    return this->get_Vel_Heroi() < heroi.get_Vel_Heroi();
 }
 
 

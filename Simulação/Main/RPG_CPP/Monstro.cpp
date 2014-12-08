@@ -5,7 +5,7 @@ Monstro::Monstro(string nome, string descricao)
 :nome_Monstro(nome), descricao_Monstro(descricao)
 {
 
- this->magia_Monstro = new vector <Magia*>;
+ //this->magia_Monstro = new vector <Magia*>;
  this->exp_Ganha = 1000;
  this->set_HP_Monstro(100);
  this->set_MP_Monstro(100);
@@ -20,7 +20,7 @@ Monstro::Monstro(string nome, string descricao)
 
 Monstro::Monstro(const string& nome,const string& descricao_Monstro, const int& hp, const int& mp, const int& ataque, const int& defesa, const int& magia, const int& velocidade, const int& exp)
 {
- this->magia_Monstro = new vector <Magia*>;
+ //this->magia_Monstro = new vector <Magia*>;
  this->exp_Ganha = exp;
  this->set_HP_Monstro(100);
  this->set_MP_Monstro(100);
@@ -35,7 +35,7 @@ Monstro::Monstro(const string& nome,const string& descricao_Monstro, const int& 
 
 Monstro::~Monstro()
 {
- delete [] this->magia_Monstro;
+// delete [] this->magia_Monstro;
  delete [] this->drop;
 }
 
@@ -70,17 +70,34 @@ void Monstro::set_Descricao_Monstro(const string& descricao){
 
 void Monstro::set_HP_Monstro(const int& hp){
    if(hp >= 0)
-     this->HP = hp;
+     this->HP_atual = hp;
    else
-     this->HP = 500;
+    this->HP_atual = 0;
 }
 
 void Monstro::set_MP_Monstro(const int& mp){
    if(mp >= 0)
-     this->MP = mp;
+     this->MP_atual = mp;
    else
-     this->MP = 50;
+     this->MP_atual = 0;
 }
+
+
+void Monstro::set_HP_Atual_Monstro(const int& hp){
+   if(hp >= 0)
+     this->HP_atual = hp;
+   else
+    this->HP_atual = 0;
+}
+
+void Monstro::set_MP_Atual_Monstro(const int& mp){
+   if(mp >= 0)
+     this->MP_atual = mp;
+   else
+     this->MP_atual = 0;
+}
+
+
 
 void Monstro::set_Atk_Monstro(const int& atk){
    if(atk >= 0)
@@ -109,7 +126,85 @@ void Monstro::set_Vel_Monstro(const int& vel){
      this->velocidade = 5;
 }
 
+void Monstro::set_Exp(const int& exp){
+   if(exp >= 0)
+     this->exp_Ganha = exp;
+   else
+     this->exp_Ganha = 0;
+}
+
+
 void Monstro::set_Habilidade_Monstro(Magia* magia){
 
+if(magia != 0)
+    this->magia_Monstro.push_back(magia);
+}
+
+string Monstro::get_Nome_Monstro() const{
+return this->nome_Monstro;
+}
+
+string Monstro::get_Descricao_Monstro() const{
+return this->descricao_Monstro;
+}
+
+
+int Monstro::get_HP_Monstro() const{
+return this->HP;
+}
+
+int Monstro::get_HP_Atual_Monstro() const{
+return this->HP_atual;
+}
+
+int Monstro::get_MP_Monstro() const{
+return this->MP_atual;
+}
+
+int Monstro::get_MP_Atual_Monstro() const{
+return this->MP_atual;
+}
+
+int Monstro::get_MAX_HP_Monstro() const{
+return this->max_Hp;
+}
+
+int Monstro::get_MAX_MP_Monstro() const{
+return this->max_Mp;
+}
+
+int Monstro::get_Def_Monstro() const{
+return this->defesa;
+}
+
+
+int Monstro::get_Atk_Monstro() const{
+return this->ataque;
+}
+
+
+int Monstro::get_Mag_Monstro() const{
+return this->magia;
+}
+
+int Monstro::get_Vel_Monstro() const{
+return this->velocidade;
+}
+
+vector <Magia*> Monstro::get_Habilidades_Monstro() const{
+return this->magia_Monstro;
+}
+
+int Monstro::get_Exp() const{
+return this->exp_Ganha;
+}
+/*
+void Monstro::Atacar(const int& opcao, const Grupo& grupo){
+srand(time(NULL));
+int alvo = rand()%grupo.equipe->size() + 0;
+switch(opcao)
+case 1: //atacar
 
 }
+
+*/

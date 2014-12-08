@@ -18,6 +18,6 @@ Trovao::Trovao(const Trovao& trovao_Cpy)
 
 }
 
-Trovao::Efeito(){
+int Trovao::Efeito(){
 cout<< "Vai cry?" << endl;
 }

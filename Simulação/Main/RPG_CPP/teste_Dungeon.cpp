@@ -5,6 +5,8 @@
 #include <string.h>
 #include <conio.h>
 #include <vector>
+#include <typeinfo>
+
 #include "Trovao.h"
 #include "Heroi.h"
 #include "Mago.h"
@@ -75,19 +77,29 @@ int main(){
                           {1,0,4,0,1},
                           {1,2,0,0,1},
                           {1,1,1,1,1}};
- Grupo* grupo;
+ Grupo* grupo = new Grupo;
  Heroi* hero = new Mago;
  Magia* magia = new Trovao;
 
- cout << "passou" << endl;
  grupo->set_Heroi(hero);
- (Mago*(grupo->equipe[0]))->set_Magia_Mago(magia);
+ Mago* mago = dynamic_cast<Mago*> (grupo->equipe[0]);
+ cout << "HET" << endl;
+
+ if (mago != 0)
+ {
+
+ }
+/*
+ cout << "passou" << endl;
+ //grupo->set_Heroi(hero);
+
  Posicao heroi_Pos;
  string opcao;
  while(1 < 10)
-  Menu(dungeon, heroi_Pos, grupo);
+    cout <<"tt"<< endl;
+//  Menu(dungeon, heroi_Pos, grupo);
 
-
+*/
  system("pause");
  return 0;
 }

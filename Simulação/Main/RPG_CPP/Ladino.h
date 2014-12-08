@@ -7,7 +7,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
-#include "monstro.h"
+#include "Monstro.h"
 #include "Equipamento.h"
 #include "Heroi.h"
 
@@ -22,7 +22,7 @@ public:
 
     void Roubar(Monstro&);
 
-	void Equipar(Equipamento&);
+	void Equipar(const Equipamento&);
     void Subir_De_Nivel(const int&);
     void Def_Stats();
 };

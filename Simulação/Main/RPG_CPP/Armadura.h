@@ -14,8 +14,7 @@ class Armadura : public Equipamento
 {
  friend ostream& operator<<(ostream&, const Armadura&);
  protected:
-	int poder_Defesa;
-	//Elemento elemento;
+
 public:
 	Armadura(const int& b_Defesa = 0);
 	Armadura(const string&, const string&, const int&,const int&,const int&,const int&,const int&);

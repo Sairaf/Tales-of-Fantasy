@@ -587,17 +587,17 @@
 	<iostream>
 	"Magia.h"
 
-1417739019 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\acessorio.cpp
+1418017777 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\acessorio.cpp
 	"Acessorio.h"
 
-1417739019 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\acessorio.h
+1418017759 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\acessorio.h
 	<string>
 	<vector>
 	<list>
 	<iostream>
 	"Equipamento.h"
 
-1417739019 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\equipamento.h
+1418017519 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\equipamento.h
 	<string>
 	<vector>
 	<list>
@@ -605,17 +605,17 @@
 	<assert.h>
 	"Item.h"
 
-1417744292 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.h
+1418016949 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.h
 	<string>
 	<vector>
 	<list>
 	<iostream>
 	<assert.h>
 
-1417739019 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\arma.cpp
+1418017358 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\arma.cpp
 	"Arma.h"
 
-1417739019 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\arma.h
+1418017337 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\arma.h
 	<string>
 	<vector>
 	<list>
@@ -623,10 +623,10 @@
 	<assert.h>
 	"Equipamento.h"
 
-1417146347 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\armadura.cpp
+1418018054 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\armadura.cpp
 	"Armadura.h"
 
-1417739019 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\armadura.h
+1418017834 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\armadura.h
 	<string>
 	<vector>
 	<list>
@@ -646,16 +646,17 @@
 	"Monstro.h"
 	"Magia.h"
 
-1417746307 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.h
+1417918557 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.h
 	<string>
 	<vector>
 	<list>
 	<iostream>
 	<string.h>
+	<time.h>
 	"Item.h"
 	"Magia.h"
 
-1417744292 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\magia.h
+1417979988 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\magia.h
 	<string>
 	<vector>
 	<list>
@@ -672,18 +673,21 @@
 	<vector>
 	<string.h>
 
-1417288763 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\equipamento.cpp
+1418018114 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\equipamento.cpp
 	"Equipamento.h"
 
-1417749826 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.cpp
+1418016284 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.cpp
 	"Grupo.h"
 
-1417749761 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.h
+1418016301 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.h
 	<cstdlib>
 	<iostream>
 	<stdlib.h>
 	<typeinfo>
 	<vector>
+	<stdlib.h>
+	<time.h>
+	<algorithm>
 	"Heroi.h"
 	"Guerreiro.h"
 	"Mago.h"
@@ -691,7 +695,7 @@
 	"Item.h"
 	"Monstro.h"
 
-1417748005 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.h
+1417988028 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.h
 	<string>
 	<vector>
 	<list>
@@ -714,7 +718,7 @@
 	"Magia.h"
 	"Heroi.h"
 
-1417748201 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\mago.h
+1418013862 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\mago.h
 	<string>
 	<vector>
 	<list>
@@ -725,21 +729,21 @@
 	"Magia.h"
 	"Heroi.h"
 
-1417739019 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\ladino.h
+1417918267 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\ladino.h
 	<string>
 	<vector>
 	<list>
 	<iostream>
 	<stdlib.h>
 	<time.h>
-	"monstro.h"
+	"Monstro.h"
 	"Equipamento.h"
 	"Heroi.h"
 
 1417739019 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\guerreiro.cpp
 	"Guerreiro.h"
 
-1417739019 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.cpp
+1418012588 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.cpp
 	"Heroi.h"
 
 1417744292 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.cpp
@@ -767,13 +771,13 @@
 	<list>
 	<iostream>
 
-1417739019 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\ladino.cpp
+1417908457 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\ladino.cpp
 	"Ladino.h"
 
-1417286698 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\magia.cpp
+1418012627 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\magia.cpp
 	"Magia.h"
 
-1417748252 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\mago.cpp
+1418013750 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\mago.cpp
 	"Mago.h"
 
 1416974403 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\menu.cpp
@@ -792,7 +796,7 @@
 	<string>
 	"Cidade.h"
 
-1417746562 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\teste_dungeon.cpp
+1418012922 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\teste_dungeon.cpp
 	<locale>
 	<iostream>
 	<cstdlib>
@@ -800,6 +804,8 @@
 	<string.h>
 	<conio.h>
 	<vector>
+	<typeinfo>
+	"Trovao.h"
 	"Heroi.h"
 	"Mago.h"
 	"Guerreiro.h"
@@ -809,16 +815,16 @@
 	"Cidade.h"
 	"Grupo.h"
 
-1417744292 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\trovao.cpp
+1417980000 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\trovao.cpp
 	"Trovao.h"
 
-1417748648 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\trovao.h
+1417980000 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\trovao.h
 	<string>
 	<vector>
 	<list>
 	<iostream>
 	"Magia.h"
 
-1417746387 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.cpp
+1418012550 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.cpp
 	"Monstro.h"
 

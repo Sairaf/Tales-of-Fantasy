@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="RPG_CPP" />
+		<Option title="ToF" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -44,6 +44,8 @@
 		<Unit filename="Cidade.h" />
 		<Unit filename="Equipamento.cpp" />
 		<Unit filename="Equipamento.h" />
+		<Unit filename="Espada.cpp" />
+		<Unit filename="Espada.h" />
 		<Unit filename="Grupo.cpp" />
 		<Unit filename="Grupo.h" />
 		<Unit filename="Guerreiro.cpp" />

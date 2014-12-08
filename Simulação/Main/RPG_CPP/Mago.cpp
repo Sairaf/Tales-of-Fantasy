@@ -3,23 +3,25 @@
 Mago::Mago(string nome, string descricao)
 :Heroi(nome, descricao)
 {
- this->lista_Magias = new vector<Magia*>;
+// this->lista_Magias = new vector<Magia*>;
 }
 
 Mago::Mago(const string& nome,const string& descricao, const int& hp, const int& mp, const int& ataque, const int& defesa, const int& magia, const int& velocidade)
 :Heroi(nome, descricao, hp, mp, ataque, defesa, magia, velocidade)
 {
-  this->lista_Magias = new vector<Magia*>;
+ // this->lista_Magias = new vector<Magia*>;
 }
 
 Mago::~Mago(){
- delete [] this->lista_Magias;
+ int cont;
+ for(cont = 0; cont < (int) this->lista_Magias.size(); cont++)
+ delete [] this->lista_Magias[0];
 }
 
 void Mago::set_Magia_Mago(Magia* magia)
 {
  if(magia != 0)
-     this->lista_Magias->push_back(magia);
+     this->lista_Magias.push_back(magia);
 }
 
 void Mago::Subir_De_Nivel(const int& experiencia)
@@ -51,10 +53,28 @@ void Mago::Subir_De_Nivel(const int& experiencia)
  }
 }
 
+vector <Magia*> Mago::get_Magias_Mago() const{
+ return this->lista_Magias;
+}
 
 void Mago::Equipar(const Equipamento& equipamento)
 {
 
+}
+
+void Mago::Menu_ataque()
+{
+ cout << "E o turno de"<< this->get_Nome_Heroi() << endl;
+ cout << "O que ele ira fazer?" << endl;
+ cout << "1 - Atacar" << endl;
+ cout << "2 - Usar magia" << endl;
+ cout << "3 - Usar item" << endl;
+}
+
+void Mago::Show_Magics(){
+ int i;
+ for(i = 0; i < this->lista_Magias.size(); i++)
+    cout << this->lista_Magias[i]  << endl;
 }
 
 

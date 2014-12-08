@@ -15,13 +15,12 @@ class Espada: public Arma
 {
  friend ostream& operator<<(ostream& output, const Espada&);
  protected:
-	int poder_Ataque ;
-    string Elemento_Espada ;
+
 public:
 	Espada();
-	Espada(const string&, const string&,const int& b_Atk,const int& b_Def,const int& b_Mag,const int& b_Vel);
+	Espada(const string&, const string&,const int& ,const int& ,const int&,const int&, const int& );
 	~Espada();
 
-    void Add_Bonus(const int&) = 0;
+    void Efeito();
 };
 #endif

@@ -20,12 +20,14 @@ protected:
 	string descricao;
 	int pontosExperiencia;
 
-//	Arma arma;
-//	Armadura armadura;
-//	Acessorio acessorio;
+  	Arma* arma;
+ 	Armadura* armadura;
+ 	Acessorio* acessorio;
     static const int MAX_LV = 10;
     int lv_Atual;
 	int HP;
+	int HP_atual;
+	int MP_atual;
 	int MP;
 	int ataque;
 	int defesa;
@@ -44,6 +46,8 @@ public:
 	void set_Descricao_Heroi(const string&);
 	void set_HP_Heroi(const int&);
 	void set_MP_Heroi(const int&);
+	void set_HP_Atual(const int&);
+	void set_MP_Atual(const int&);
 	void set_Atk_Heroi(const int&);
 	void set_Def_Heroi(const int&);
 	void set_Mag_Heroi(const int&);
@@ -53,7 +57,9 @@ public:
 	string get_Descricao_Heroi() const;
 	int    get_HP_Heroi() const;
 	int    get_MAX_HP_Heroi() const;
+	int    get_HP_ATUAL() const;
 	int    get_MP_Heroi() const;
+	int    get_MP_ATUAL() const;
 	int    get_MAX_MP_Heroi() const;
 	int    get_Atk_Heroi() const;
 	int    get_Def_Heroi() const;
@@ -64,8 +70,10 @@ public:
     bool operator!=(const int&);
     bool operator==(const Heroi&);
     bool operator!=(const Heroi&);
-
+    bool operator<(const Heroi&);
     Heroi* operator=(const Heroi&);
+
+    virtual void Menu_ataque() = 0;
 	virtual void Subir_De_Nivel(const int&) = 0;
 	virtual void Equipar(const Equipamento& equipamento) = 0;
 	virtual void Def_Stats() = 0;

@@ -13,8 +13,8 @@ Equipamento::Equipamento(int b_Atk)
 
 
 
-Equipamento::Equipamento(const string& nome,const string& descricao, int b_Atk, int b_Def, int b_Mag, int b_Vel)
-:Item(nome, descricao)
+Equipamento::Equipamento(const string& nome,const string& descricao,const int& b_Atk,const int& b_Def,const int& b_Mag,const int& b_Vel,const int& durabilidade)
+:Item(nome, descricao, durabilidade, false)
 {
  this->bonus_Atk = b_Atk;
  this->bonus_Def = b_Def;
@@ -43,7 +43,7 @@ ostream& operator<<(ostream& output, const Equipamento& equipamento){
  output << "Bonus de defesa:" << equipamento.getDef() << endl;
  output << "Bonus de magia:"  << equipamento.getMag() << endl;
  output << "Bonus de velocidade:" << equipamento.getVel() << endl;
- //output << "Elemento:" equipamento.getElemento() << endl;
+
  return output;
 }
 
@@ -74,16 +74,7 @@ void Equipamento::setVel(const int& stat){
  else
   this->bonus_Vel = 0;
 }
-/*
-void Equipamento::setElemento(const Elemento& elemento){
- string aux = >eleemento.getNome()
- if(elemento!= null && !aux.empty())
-  this->Efeito_Elemental= elemento;
- else
-  this->Efeito_Elemental= NULL;
-}
 
-*/
 
 int Equipamento::getAtk() const {
 return this->bonus_Atk;

@@ -24,6 +24,7 @@ Magia::Magia(const Magia& magia_Cpy){
 
 Magia::~Magia()
 {
+
 }
 
 void Magia::set_Nome_Magia(const string& nome){

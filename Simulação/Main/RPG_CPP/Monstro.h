@@ -6,7 +6,9 @@
 #include <list>
 #include <iostream>
 #include <string.h>
+#include <time.h>
 
+//#include "Grupo.h"
 #include "Item.h"
 #include "Magia.h"
 
@@ -15,7 +17,7 @@ class Monstro
 protected:
     string nome_Monstro;
 	string descricao_Monstro;
-	vector <Magia*>* magia_Monstro;
+	vector <Magia*> magia_Monstro;
 	int num_Hab;
 	int HP;
 	int MP;
@@ -63,9 +65,10 @@ public:
 	int get_Def_Monstro() const;
 	int get_Mag_Monstro() const;
 	int get_Vel_Monstro() const;
-	Magia* get_Habilidades_Monstro () const;
+	vector <Magia*> get_Habilidades_Monstro () const;
     int get_Exp()const;
 
+    void Atacar(const int&/*, Grupo&*/);
     virtual void Def_Stats() = 0;
 };
 

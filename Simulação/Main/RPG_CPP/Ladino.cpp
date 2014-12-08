@@ -49,8 +49,9 @@ void Ladino::Roubar(Monstro& monstro)
 
 }
 
-void Ladino::Equipar(Equipamento& equipamento)
+void Ladino::Equipar(const Equipamento& equipamento)
 {
+    cout <<"wat" << endl;
 }
 
 

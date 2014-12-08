@@ -12,13 +12,12 @@ using namespace std;
 class Item
 {
 friend ostream& operator<<(ostream&, const Item&);
-friend ostream& operator<<(ostream&, const Item*);
 protected:
 	string nome_Item;
 	string descricao_Item;
 	int durabilidade;
-    bool consumivel;
 public:
+    bool consumivel;
 	Item(string nome = "Item", string descricao = "Um item");
 	Item(const string& nome,const string& descricao, const int& durabilidade, const bool&);
 	Item(const Item&);

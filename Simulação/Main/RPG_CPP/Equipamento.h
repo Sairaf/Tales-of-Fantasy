@@ -22,7 +22,7 @@ public:
 	Equipamento(string nome = "Equipamento", string descricao = "**********");
 	Equipamento(int bonus = 0);
 	Equipamento(const Equipamento&);
-	Equipamento(const string& nome,const string& descricao, int b_Atk, int b_Def, int b_Mag, int b_Vel);
+	Equipamento(const string& nome,const string& descricao, const int&, const int&, const int&, const int&, const int&);
 	virtual ~Equipamento();
 
 	void setAtk(const int&);

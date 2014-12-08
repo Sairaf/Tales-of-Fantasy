@@ -15,8 +15,8 @@ public:
 
 	Trovao();
 	Trovao(const Trovao&);
-	virtual ~Trovao();
-    void Efeito() ;
+	~Trovao();
+    int Efeito() ;
 };
 
 

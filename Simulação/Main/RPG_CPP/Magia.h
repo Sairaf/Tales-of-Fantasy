@@ -34,7 +34,8 @@ public:
        bool operator==(const Magia&);
        Magia* operator=(const Magia&);
        bool operator!=(const Magia&);
-       virtual void Efeito() = 0;
+
+       virtual int Efeito() = 0;
 };
 
 
