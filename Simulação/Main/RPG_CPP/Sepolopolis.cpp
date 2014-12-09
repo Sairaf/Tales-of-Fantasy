@@ -99,4 +99,8 @@ ostream& operator<<(ostream& output, const Sepolopolis& sepol)
  return output;
 }
 
-Sepolopolis*
+Sepolopolis* Sepolopolis::operator+=(const Sepolopolis& sepol)
+{
+ Cidade::operator+=(sepol);
+ return this;
+}

@@ -48,6 +48,7 @@
 		<Unit filename="Caverna_Monstro.h" />
 		<Unit filename="Cidade.cpp" />
 		<Unit filename="Cidade.h" />
+		<Unit filename="Dungeon.cpp" />
 		<Unit filename="Dungeon.h" />
 		<Unit filename="Equipamento.cpp" />
 		<Unit filename="Equipamento.h" />
@@ -84,7 +85,7 @@
 		<Unit filename="Trovao.cpp" />
 		<Unit filename="Trovao.h" />
 		<Unit filename="includer.h" />
-		<Unit filename="teste_Dungeon.cpp" />
+		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
