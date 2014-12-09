@@ -17,7 +17,7 @@ class Acessorio : public Equipamento
  protected:
 
  public:
-     Acessorio(int poder = 0);
+        Acessorio(int poder = 0);
 	Acessorio(string nome = "Acessorio", string descricao = "**********");
 	Acessorio(const string& nome,const string& descricao,const int& b_Atk,const int& b_Def,const int& b_Mag,const int& b_Vel, const string&, const int&);
 	Acessorio(const Acessorio&);
@@ -25,7 +25,8 @@ class Acessorio : public Equipamento
 
 	Acessorio* operator=(const Acessorio&);
 	Acessorio* operator+=(const Acessorio&);
-    virtual void Add_Elemento(const string&) = 0;
+	virtual void Efeito() = 0;
+  	//virtual void Add_Elemento(const string&) = 0;
 };
 
 #endif

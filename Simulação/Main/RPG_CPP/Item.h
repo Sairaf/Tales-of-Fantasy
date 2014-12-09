@@ -16,7 +16,7 @@ protected:
 	string nome_Item;
 	string descricao_Item;
 	int durabilidade;
-    const static int MAX_DURABILIDADE = 99;
+        const static int MAX_DURABILIDADE = 99;
 public:
     bool consumivel;
 	Item(string nome = "Item", string descricao = "Um item");
@@ -32,7 +32,7 @@ public:
 	string get_Descricao_Item() const;
 	int    get_Durabilidade() const;
 
-	void Diminuir_Durabilidade();
+	virtual void Diminuir_Durabilidade();
 
     virtual void Efeito() = 0;
     Item* operator+=(const Item&);

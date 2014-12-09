@@ -10,10 +10,9 @@ using namespace std;
 class Faca: public Arma
 {
  friend ostream& operator<<(ostream& output, const Faca&);
- protected:
-
 public:
 	Faca();
+	Faca(int poder = 0)    ;
 	//Faca(const string&, const string&,const int& ,const int& ,const int&,const int&, const int& );
 	~Faca();
 

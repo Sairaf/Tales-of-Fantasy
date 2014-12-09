@@ -10,10 +10,9 @@ using namespace std;
 class Espada: public Arma
 {
  friend ostream& operator<<(ostream& output, const Espada&);
- protected:
-
 public:
 	Espada();
+	Espada(int poder = 0)    ;
 	//Espada(const string&, const string&,const int& ,const int& ,const int&,const int&, const int& );
 	~Espada();
 
