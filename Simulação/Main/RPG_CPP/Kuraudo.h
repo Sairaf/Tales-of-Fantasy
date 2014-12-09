@@ -10,17 +10,18 @@
 #include "Monstro.h"
 #include "Magia.h"
 #include "Kuraudo_Mirrors.h"
+
 using namespace std;
 class Kuraudo: public Monstro
 {
-protected:
+friend ostream& operator<<(ostream&, const Kuraudo&);
 public:
-	//Kuraudo(string nome = "CAMTASIA");
+	
 	Kuraudo();
-    //Kuraudo(int hp, int mp, int ataque, int defesa, int magia, int velocidade);
+    
 	~Kuraudo();
 	Kuraudo(const Kuraudo&);
-    void Def_Stats(){};
+    	void Def_Stats(){};
 };
 
 #endif

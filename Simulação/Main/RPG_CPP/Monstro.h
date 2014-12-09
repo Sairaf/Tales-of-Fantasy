@@ -8,7 +8,6 @@
 #include <string.h>
 #include <time.h>
 
-//#include "Grupo.h"
 #include "Item.h"
 #include "Magia.h"
 
@@ -16,15 +15,14 @@ class Monstro
 {
 friend ostream& operator<<(ostream&, const Monstro&);
 protected:
-    string nome_Monstro;
+   	string nome_Monstro;
 	string descricao_Monstro;
 	vector <Magia*> magia_Monstro;
-	int num_Hab;
 	int HP;
 	int MP;
 	int HP_atual;
 	int MP_atual;
-	int ataque;
+	int ataque;	
 	int defesa;
 	int velocidade;
 	int magia;
@@ -52,8 +50,8 @@ public:
 	void set_Mag_Monstro(const int&);
 	void set_Vel_Monstro(const int&);
 	void set_Habilidade_Monstro(Magia*);
-    void set_Exp (const int&);
-    void set_Item (Item*);
+        void set_Exp (const int&);
+        void set_Item (Item*);
 
 	string get_Nome_Monstro() const;
 	string get_Descricao_Monstro() const;
@@ -68,12 +66,12 @@ public:
 	int get_Mag_Monstro() const;
 	int get_Vel_Monstro() const;
 	vector <Magia*> get_Habilidades_Monstro () const;
-    int get_Exp()const;
-    Item* get_Item() const;
+        int get_Exp()const;
+        Item* get_Item() const;
 
-    void Atacar(const int&/*, Grupo&*/);
-    virtual void Def_Stats() = 0;
-    Monstro* operator+=(const Monstro&);
+        void Atacar(const int&);
+        virtual void Def_Stats() = 0;
+        Monstro* operator+=(const Monstro&);
 };
 
 #endif
