@@ -1,10 +1,10 @@
 #include "Arma.h"
-/*
+
 Arma::Arma(int p_Atk)
-:Equipamento(p_Atk)
+:Equipamento(p_Atk,0)
 {
 
-}*/
+}
 
 
 
@@ -24,14 +24,19 @@ Arma::Arma(const Arma& arma)
  this->bonus_Atk = arma.bonus_Atk;
 }
 
-ostream& operator<<(ostream& output , const Arma& arma){
- output << static_cast <const Equipamento&> (arma) << "\n";
- //output << "Poder de ataque" << arma.get_P_Atk();
- return output;
-}
-
 void Arma::Add_Bonus(const int& bonus){
    int aux = this->getAtk();
    aux+=bonus;
    this->setAtk(aux) ;
+}
+
+ostream& operator<<(ostream& output , const Arma& arma){
+ output << static_cast <const Equipamento&> (arma) << "\n";
+ return output;
+}
+
+Arma* Arma::operator+=(const Arma& arma)
+{
+ Arma::operator+=(arma);
+ return this;
 }

@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <algorithm>
+#include <conio.h>
 
 #include "Heroi.h"
 #include "Guerreiro.h"
@@ -16,7 +17,15 @@
 #include "Ladino.h"
 #include "Item.h"
 #include "Monstro.h"
+#define TAM 5
+
 using namespace std;
+
+typedef struct {
+  int c_X;
+  int c_Y;
+}Posicao;
+
 
 class Grupo
 {
@@ -39,8 +48,13 @@ class Grupo
     void set_Item(Item*);
     int get_Dinheiro() const;
 
-    void Atacar(Heroi*, Monstro&);
-    void Batalhar(Monstro&);
+    void Imprimir(int [][TAM]);
+    int  Pesquisar(int [][TAM], int );
+    void Menu(int [][TAM], Posicao&, Grupo&);
+    Posicao get_Pos(int  [][TAM]);
+
+    void Atacar(Heroi*, Monstro*);
+    void Batalhar(Monstro*);
     void Ordenar_Herois();
     void Mostrar_Herois();
     void Mostrar_Inventario();

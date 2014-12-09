@@ -19,5 +19,5 @@ Trovao::Trovao(const Trovao& trovao_Cpy)
 }
 
 int Trovao::Efeito(){
-cout<< "Vai cry?" << endl;
+  return 3;
 }

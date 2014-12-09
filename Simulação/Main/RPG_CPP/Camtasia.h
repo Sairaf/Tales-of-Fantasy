@@ -20,7 +20,7 @@ public:
     Camtasia(int hp, int mp, int ataque, int defesa, int magia, int velocidade);
 	Camtasia(const Camtasia&);
 	virtual ~Camtasia();
-
+    void Def_Stats(){}
 };
 
 #endif

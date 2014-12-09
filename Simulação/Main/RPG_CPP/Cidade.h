@@ -7,11 +7,13 @@
 #include <string>
 #include <vector>
 #include <string.h>
+#include "Grupo.h"
 
 using namespace std;
 
 class Cidade
 {
+ friend ostream& operator<<(ostream&, const Cidade&);
  protected:
     string nome;
     vector <string> npc;
@@ -20,9 +22,11 @@ class Cidade
   virtual ~Cidade();
   Cidade(const Cidade&);
 
-  virtual void Add_NPC(const string&) = 0;
+  void   setNome(const string&);
   string getNome() const;
-  virtual void menu_Cidade() = 0;
-  virtual void menu_Texto_Cidade() = 0;
+
+  void Add_NPC(const string&);
+  virtual void Menu_Cidade(Grupo&) = 0;
+  virtual void Menu_Texto_Cidade() = 0;
 };
 #endif // CIDADE_H

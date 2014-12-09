@@ -70,11 +70,16 @@ ostream& operator<<(ostream& output, const Item& item){
  output << "Nome do item" << item.get_Nome_Item() << endl;
  output << "Descricao do item" << item.get_Descricao_Item() << endl;
  output << "Durabilidade" << item.get_Durabilidade() << endl;
+ if(item.consumivel == true)
+  output<< "Este item e consumivel"    << endl;
+ else{
+  output<< "Este item nao e consumivel"    << endl;
+ }
+ return output;
 }
-/*
-ostream& operator<<(ostream& output, const Item* item){
- output << "Nome do item" << item.get_Nome_Item() << endl;
- output << "Descricao do item" << item.get_Descricao_Item() << endl;
- output << "Durabilidade" << item.get_Durabilidade() << endl;
+
+Item* Item::operator+=(const Item& item)
+{
+ this->durabilidade+= item.durabilidade;
+ return this;
 }
-*/

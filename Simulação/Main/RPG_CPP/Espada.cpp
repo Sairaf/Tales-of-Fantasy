@@ -6,7 +6,24 @@ Espada::Espada()
 
 }
 
+Espada::~Espada()
+{
+
+}
+
 void Espada::Efeito()
 {
  cout << "...Nada acontece";
+}
+
+ostream& operator<<(ostream& output, const Espada& espada)
+{
+ cout << static_cast <const Arma&>(espada) << endl;
+ return output;
+}
+
+Espada* Espada::operator+=(const Espada& espada)
+{
+ Arma::operator+=(espada);
+ return this;
 }

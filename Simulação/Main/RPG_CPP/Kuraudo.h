@@ -9,7 +9,7 @@
 
 #include "Monstro.h"
 #include "Magia.h"
-
+#include "Kuraudo_Mirrors.h"
 using namespace std;
 class Kuraudo: public Monstro
 {
@@ -20,7 +20,7 @@ public:
     //Kuraudo(int hp, int mp, int ataque, int defesa, int magia, int velocidade);
 	~Kuraudo();
 	Kuraudo(const Kuraudo&);
-
+    void Def_Stats(){};
 };
 
 #endif

@@ -2,11 +2,7 @@
 #define ESPADA_H
 
 #include <string>
-#include <vector>
-#include <list>
 #include <iostream>
-#include <assert.h>
-#include <cstdlib>
 #include "Arma.h"
 
 using namespace std;
@@ -18,9 +14,12 @@ class Espada: public Arma
 
 public:
 	Espada();
-	Espada(const string&, const string&,const int& ,const int& ,const int&,const int&, const int& );
+	//Espada(const string&, const string&,const int& ,const int& ,const int&,const int&, const int& );
 	~Espada();
 
     void Efeito();
+    void Add_Bonus(const int&){};
+
+    Espada* operator+=(const Espada&);
 };
 #endif

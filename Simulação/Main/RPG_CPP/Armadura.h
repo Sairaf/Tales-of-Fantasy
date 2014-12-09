@@ -16,7 +16,7 @@ class Armadura : public Equipamento
  protected:
 
 public:
-	Armadura(const int& b_Defesa = 0);
+	Armadura(int b_Defesa = 0);
 	Armadura(const string&, const string&, const int&,const int&,const int&,const int&,const int&);
 	Armadura(const Armadura&);
 	virtual ~Armadura();
@@ -25,6 +25,7 @@ public:
 	int get_P_Def() const;
 
 	virtual void Add_Bonus(const int&) = 0;
+	Armadura* operator+=(const Armadura&);
 };
 
 #endif

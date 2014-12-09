@@ -32,7 +32,9 @@ public:
 	int    get_Durabilidade() const;
 
 	void Diminuir_Durabilidade();
+
     virtual void Efeito() = 0;
+    Item* operator+=(const Item&);
 };
 
 

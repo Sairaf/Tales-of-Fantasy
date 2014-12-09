@@ -1,9 +1,16 @@
-#include <iostream>
+#ifndef MAIN_H
+#define MAIN_H
 
-using namespace std;
+#include <iostream>
+#include <cstdlib>
+#include <vector>
+#include <string>
+#include "includer.h"
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+
+    system("pause");
+    return EXIT_FAILURE;
 }
+#endif

@@ -15,7 +15,7 @@ Monstro::Monstro(string nome, string descricao)
  this->set_Def_Monstro(10);
  this->set_Mag_Monstro(5);
  this->set_Vel_Monstro(5);
- this->drop = new Item*;
+// this->drop = new Item;
 }
 
 Monstro::Monstro(const string& nome,const string& descricao_Monstro, const int& hp, const int& mp, const int& ataque, const int& defesa, const int& magia, const int& velocidade, const int& exp)
@@ -30,7 +30,7 @@ Monstro::Monstro(const string& nome,const string& descricao_Monstro, const int& 
  this->set_Def_Monstro(10);
  this->set_Mag_Monstro(5);
  this->set_Vel_Monstro(5);
- this->drop = new Item*;
+ this->drop = 0;
 }
 
 Monstro::~Monstro()

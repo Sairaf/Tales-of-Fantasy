@@ -6,17 +6,20 @@
 #include <string>
 #include "Cidade.h"
 
+
 using namespace std;
 
 class Sepolopolis: public Cidade
 {
+ friend ostream& operator<<(ostream&, const Sepolopolis&);
  public:
       Sepolopolis(string nome ="Sepolopolis");
       virtual ~Sepolopolis();
 
+  void Vendedor(Grupo&);
   void Add_NPC(const string&);
-  void menu_Cidade();
-  void menu_Texto_Cidade();
+  void Menu_Cidade(Grupo&);
+  void Menu_Texto_Cidade();
 };
 
 #endif

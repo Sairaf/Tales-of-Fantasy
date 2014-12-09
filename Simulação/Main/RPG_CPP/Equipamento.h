@@ -21,6 +21,7 @@ protected:
 public:
 	Equipamento(string nome = "Equipamento", string descricao = "**********");
 	Equipamento(int bonus = 0);
+	Equipamento(int bonus = 0, int dif = 0);
 	Equipamento(const Equipamento&);
 	Equipamento(const string& nome,const string& descricao, const int&, const int&, const int&, const int&, const int&);
 	virtual ~Equipamento();
@@ -29,18 +30,16 @@ public:
 	void setDef(const int&);
 	void setMag(const int&);
 	void setVel(const int&);
-	//void setEfeito(const Elemento&);
 
 	int getAtk() const;
 	int getDef() const;
 	int getMag() const;
 	int getVel() const;
-	//Elemento* getElemento() const;
 
+    virtual void Efeito() = 0;
 	virtual void Add_Bonus(const int&) = 0;
-	//virtual void Add_Efeito(const Elemento& elemento) = 0;
 
-
+    Equipamento* operator+=(const Equipamento&);
 
 };
 

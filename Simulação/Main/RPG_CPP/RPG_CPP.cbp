@@ -34,18 +34,27 @@
 		</Compiler>
 		<Unit filename="Acessorio.cpp" />
 		<Unit filename="Acessorio.h" />
+		<Unit filename="Anel_de_Forca.cpp" />
+		<Unit filename="Anel_de_Forca.h" />
 		<Unit filename="Arma.cpp" />
 		<Unit filename="Arma.h" />
 		<Unit filename="Armadura.cpp" />
 		<Unit filename="Armadura.h" />
+		<Unit filename="Cajado.cpp" />
+		<Unit filename="Cajado.h" />
 		<Unit filename="Camtasia.cpp" />
 		<Unit filename="Camtasia.h" />
+		<Unit filename="Caverna_Monstro.cpp" />
+		<Unit filename="Caverna_Monstro.h" />
 		<Unit filename="Cidade.cpp" />
 		<Unit filename="Cidade.h" />
+		<Unit filename="Dungeon.h" />
 		<Unit filename="Equipamento.cpp" />
 		<Unit filename="Equipamento.h" />
 		<Unit filename="Espada.cpp" />
 		<Unit filename="Espada.h" />
+		<Unit filename="Faca.cpp" />
+		<Unit filename="Faca.h" />
 		<Unit filename="Grupo.cpp" />
 		<Unit filename="Grupo.h" />
 		<Unit filename="Guerreiro.cpp" />
@@ -68,10 +77,13 @@
 		<Unit filename="Menu.h" />
 		<Unit filename="Monstro.cpp" />
 		<Unit filename="Monstro.h" />
+		<Unit filename="Roupas_Leves.cpp" />
+		<Unit filename="Roupas_Leves.h" />
 		<Unit filename="Sepolopolis.cpp" />
 		<Unit filename="Sepolopolis.h" />
 		<Unit filename="Trovao.cpp" />
 		<Unit filename="Trovao.h" />
+		<Unit filename="includer.h" />
 		<Unit filename="teste_Dungeon.cpp" />
 		<Extensions>
 			<code_completion />

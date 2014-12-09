@@ -3,7 +3,7 @@
 Kuraudo::Kuraudo()
 :Monstro("Kuraudo", "Monstro habitante da ""Caverna do Monstro"". Nao sabe-se muito sobre ele ", 1000,1000,100,20,50,60,600)
 {
-
+ this->drop = new Kuraudo_Mirrors();
 }
 
 

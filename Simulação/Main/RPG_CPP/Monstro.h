@@ -28,7 +28,7 @@ protected:
 	int velocidade;
 	int magia;
 	int exp_Ganha;
-	Item** drop;
+	Item* drop;
 	static const int max_Hp = 99999;
 	static const int max_Mp = 99999;
 
