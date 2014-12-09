@@ -26,7 +26,7 @@ class Guerreiro : public Heroi
  	void Equipar(Equipamento*);
 	void Subir_De_Nivel(const int&);
  	void Def_Stats();
- 	Guerreiro* operator+=(const Guerreiro&);
+ 	Guerreiro* operator+=(Guerreiro*);
 };
 
 #endif

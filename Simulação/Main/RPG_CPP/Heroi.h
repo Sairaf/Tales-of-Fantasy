@@ -79,7 +79,7 @@ public:
    	bool operator!=(const Heroi&);
    	bool operator<(const Heroi&);
     	Heroi* operator=(const Heroi&);
-   	Heroi* operator+=(const Heroi&);
+   	Heroi* operator+=(Heroi*);
 
 	virtual void Menu_ataque() = 0;
 	virtual void Subir_De_Nivel(const int&) = 0;

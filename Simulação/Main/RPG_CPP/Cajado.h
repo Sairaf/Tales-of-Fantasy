@@ -1,5 +1,5 @@
 #ifndef CAJADO_H
-#define CAJADo_H
+#define CAJADO_H
 
 #include <iostream>
 #include <vector>
@@ -10,7 +10,7 @@ class Cajado: public Arma
 {
  friend ostream& operator<<(ostream&, const Cajado&)   ;
  public:
- Cajado(int poder = 0)    ;
+ Cajado(int poder = 0);
  Cajado();
  ~Cajado();
 

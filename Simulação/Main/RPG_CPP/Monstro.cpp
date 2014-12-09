@@ -210,24 +210,24 @@ Item* Monstro::get_Item() const
  return this->drop;
 }
 
-friend ostream& operator<<(ostream& output, const Monstro& monstro)
+ostream& operator<<(ostream& output, const Monstro& monstro)
 {
     output << "Nome do monstro: " << monstro.get_Nome_Monstro() << endl;
     output << "Descricao: " << monstro.get_Descricao_Monstro() << endl;
     output << "Atributos:" <<endl;
     output << "HP:" << monstro.get_HP_Atual_Monstro() << "/" <<monstro.get_MAX_HP_Monstro() << endl;
     output << "MP:" << monstro.get_MP_Atual_Monstro() << "/" <<monstro.get_MAX_MP_Monstro() << endl;
-    output << "Ataque: " << monstro.get_Atk_monstro() << endl;
-    output << "Defesa:" << monstro.get_Def_monstro() << endl;
-    output << "Magia:" << monstro.get_Mag_monstro() << endl;
-    output << "Velocidade:"<< monstro.get_Vel_monstro() << endl;
+    output << "Ataque: " << monstro.get_Atk_Monstro() << endl;
+    output << "Defesa:" << monstro.get_Def_Monstro() << endl;
+    output << "Magia:" << monstro.get_Mag_Monstro() << endl;
+    output << "Velocidade:"<< monstro.get_Vel_Monstro() << endl;
     output << "Item deixado: " << monstro.get_Item() << endl;
     output << "Experiencia ganha: " << monstro.get_Exp() << endl;
     output << "Magias:" << endl;
     int i;
-    for(i = 0; i < (int) this->magia_Monstro.size(); i++)
+    for(i = 0; i < (int) monstro.magia_Monstro.size(); i++)
     {
-     output << this->magia_Monstro[i] << endl;
+     output << monstro.magia_Monstro[i] << endl;
     }
 
     return output;

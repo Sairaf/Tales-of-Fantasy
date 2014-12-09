@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000001000000
-UnitCount=54
+UnitCount=53
 
 [VersionInfo]
 Major=1
@@ -551,7 +551,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit52]
-FileName=Sepolopis.h
+FileName=Sepolopolis.h
 CompileCpp=1
 Folder=RPG_CPP
 Compile=1
@@ -561,7 +561,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit53]
-FileName=Sepolopolis.h
+FileName=Trovao.h
 CompileCpp=1
 Folder=RPG_CPP
 Compile=1

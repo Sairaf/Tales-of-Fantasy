@@ -62,7 +62,7 @@ void Mago::Equipar(Equipamento* equipamento)
  Cajado* cajado = dynamic_cast <Cajado*> (equipamento);
  if(cajado != 0)
  {
-  this->set_Arma_Heroi(equipamento);
+  this->set_Arma_Heroi(cajado);
  }
 }
 
@@ -77,7 +77,7 @@ void Mago::Menu_ataque()
 
 void Mago::Show_Magics(){
  int i;
- for(i = 0; i < this->lista_Magias.size(); i++)
+ for(i = 0; i < (int) this->lista_Magias.size(); i++)
     cout << this->lista_Magias[i]  << endl;
 }
 
@@ -92,24 +92,24 @@ void Mago::Def_Stats(){
  this->magia = 18;
 }
 
-Mago* Mago::operator+=(const Mago& mago)
+Mago* Mago::operator+=(Mago* mago)
 {
  Heroi::operator+=(mago);
  int i;
  for(i = 0; i < (int) this->lista_Magias.size(); i++)
  {
-  this->lista_Magias[i]+=magia.lista_Magias[i];
+ // this->lista_Magias[i]+=magia.lista_Magias[i];
  }
  return this;
 }
 
-ostream& operator<<(ostream& output, const Mago& mago)
+ostream& operator<<(ostream& output, Mago* mago)
 {
  output << static_cast <const Heroi*> (mago);
  int i;
- for(i = 0; i < (int) this->lista_Magias.size(); i++)
+ for(i = 0; i < (int) mago->lista_Magias.size(); i++)
  {
-  cout << this->lista_Magias[i];
+  cout << mago->lista_Magias[i];
  }
  return output;
 }

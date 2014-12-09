@@ -15,7 +15,7 @@
 
 class Mago : public Heroi
 {
- friend ostream& operator<<(ostream& , const Mago&);
+ friend ostream& operator<<(ostream& , Mago*);
 protected:
 	vector<Magia*> lista_Magias;
     int num_Magia;
@@ -31,7 +31,7 @@ public:
 
 	vector <Magia*> get_Magias_Mago() const;
 
-    	Mago* operator+=(const Mago&) ;
+    	Mago* operator+=(Mago*) ;
 
 	void Equipar(Equipamento*);
 	void Subir_De_Nivel(const int&);

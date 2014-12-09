@@ -7,9 +7,9 @@ WINDRES = windres.exe
 RES  = 
 OBJ  = Acessorio.o Arma.o Armadura.o Equipamento.o Guerreiro.o Heroi.o Item.o Ladino.o Magia.o Mago.o Menu.o Monstro.o teste_Dungeon.o Espada.o Anel_de_Forca.o Cajado.o Camtasia.o Cidade.o Faca.o Grupo.o Kuraudo.o Kuraudo_Mirrors.o Roupas_Leves.o Sepolopolis.o Trovao.o $(RES)
 LINKOBJ  = Acessorio.o Arma.o Armadura.o Equipamento.o Guerreiro.o Heroi.o Item.o Ladino.o Magia.o Mago.o Menu.o Monstro.o teste_Dungeon.o Espada.o Anel_de_Forca.o Cajado.o Camtasia.o Cidade.o Faca.o Grupo.o Kuraudo.o Kuraudo_Mirrors.o Roupas_Leves.o Sepolopolis.o Trovao.o $(RES)
-LIBS =  -L"lib"  -fmessage-length=0 
-INCS =  -I"include" 
-CXXINCS =  -I"lib/gcc/mingw32/3.4.2/include"  -I"include/c++/3.4.2/backward"  -I"include/c++/3.4.2/mingw32"  -I"include/c++/3.4.2"  -I"include" 
+LIBS =  -L"C:/Dev-Cpp/lib"  -fmessage-length=0 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
 BIN  = RPG_CPP.exe
 CXXFLAGS = $(CXXINCS)   -fmessage-length=0
 CFLAGS = $(INCS)   -fmessage-length=0

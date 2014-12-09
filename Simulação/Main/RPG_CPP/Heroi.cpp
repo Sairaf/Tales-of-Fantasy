@@ -250,13 +250,13 @@ ostream& operator<<(ostream& output, const Heroi& heroi){
     return output;
 }
 
-Heroi* Heroi::operator+=(const Heroi& heroi)
+Heroi* Heroi::operator+=(Heroi* heroi)
 {
- this->ataque+=heroi.ataque;
- this->defesa+=heroi.defesa;
- this->magia+=heroi.magia;
- this->velocidade+=heroi.velocidade;
- this->HP+=heroi.HP;
- this->MP+=heroi.MP;
+ this->ataque = this->ataque + heroi->ataque;
+ this->defesa+=heroi->defesa;
+ this->magia+=heroi->magia;
+ this->velocidade+=heroi->velocidade;
+ this->HP+=heroi->HP;
+ this->MP+=heroi->MP;
  return this;
 }

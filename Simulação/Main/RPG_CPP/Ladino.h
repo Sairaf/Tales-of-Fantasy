@@ -24,9 +24,10 @@ public:
    	Item* Roubar(Monstro&);
 	void Equipar(Equipamento*);
 	void Subir_De_Nivel(const int&);
-        void Def_Stats();
+    void Def_Stats();
 	void Menu_Ataque();
-        Ladino* operator+=(const Ladino&);
+
+    Ladino* operator+=(Ladino*);
 };
 
 

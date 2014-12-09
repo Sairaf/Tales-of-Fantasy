@@ -92,7 +92,7 @@ void Sepolopolis::Vendedor(Grupo& grupo)
    break;
   }
  }
-
+}
 ostream& operator<<(ostream& output, const Sepolopolis& sepol)
 {
  output << static_cast <const Cidade&> (sepol) << endl;

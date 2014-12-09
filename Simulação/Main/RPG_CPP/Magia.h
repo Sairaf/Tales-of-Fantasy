@@ -19,7 +19,7 @@ public:
 	Magia(string nome= "Magia", int poder_Magia = 10);
 	Magia(const string& ,const int& ,const string& ,const string&);
 	Magia(const Magia&);
-	~Magia();
+	virtual~Magia();
 
        void set_Nome_Magia(const string&);
        void set_Poder_Magia(const int&);

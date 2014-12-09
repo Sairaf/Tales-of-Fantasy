@@ -79,7 +79,7 @@ ostream& operator<<(ostream& output, const Ladino& ladino)
  return output;
 }
 
-Ladino* Ladino:operator+=(const Ladino& ladino)
+Ladino* Ladino::operator+=(Ladino* ladino)
 {
  Heroi::operator+=(ladino);
  return this;

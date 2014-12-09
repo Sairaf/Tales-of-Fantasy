@@ -19,9 +19,9 @@ class Dungeon
      const static int MAX_SALAS;
  public:
     Dungeon(string nome= "Caverna",int num_Salas = 3);
-    Dungeon(const string&, const int&);
+    Dungeon(const string&, const int&,const int&);
     Dungeon(const Dungeon&);
-    ~Dungeon();
+    virtual ~Dungeon();
 
     void set_Nome(const string&);
     void set_Sala(const int&);
@@ -32,7 +32,7 @@ class Dungeon
     virtual void Salas(Grupo& grupo) = 0;
     virtual void Mostrar_Salas(const int& num_sala) = 0;
     static void Verificar_Num_Salas(const Dungeon&);
-    bool operator+=(const Dungeon&);
+    Dungeon* operator+=(const Dungeon&);
 };
 
 #endif // DUNGEON_H

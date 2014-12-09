@@ -14,7 +14,7 @@ Dungeon::Dungeon(const Dungeon& dung_Cpy)
  this->num_Salas = dung_Cpy.num_Salas;
 }
 
-Dungeon::Dungeon(const string& nome, const int& num_Salas)
+Dungeon::Dungeon(const string& nome, const int& num_Salas, const int& x)
 {
  this->set_Nome(nome);
  this->set_Sala(num_Salas);
@@ -63,7 +63,8 @@ ostream& operator<<(ostream& output, const Dungeon& dung)
  return output;
 }
 
-bool Dungeon::operator+=(const Dungeon& dung)
+Dungeon* Dungeon::operator+=(const Dungeon& dung)
 {
  this->nome_Dungeon+= this->nome_Dungeon+dung.nome_Dungeon;
+ return this;
 }

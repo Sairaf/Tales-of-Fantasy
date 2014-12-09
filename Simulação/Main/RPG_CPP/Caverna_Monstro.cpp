@@ -101,7 +101,7 @@ if(num_Sala == 0)
    }
 }
 Caverna_Monstro::Caverna_Monstro(string nome, int salas)
-Dungeon(nome, salas)
+:Dungeon(nome, salas)
 {
 
 }
@@ -115,13 +115,13 @@ Caverna_Monstro::Caverna_Monstro(const Caverna_Monstro& caverna)
 Caverna_Monstro::~Caverna_Monstro(){}
 
 
-Caverna_Monstro::operator+=(const Caverna_Monstro& caverna)
+Caverna_Monstro* Caverna_Monstro::operator+=(const Caverna_Monstro& caverna)
 {
  Dungeon::operator+=(caverna);
  return this;
 }
 
-ostream& operator<<(ostream&, const Caverna_Monstro& caverna)
+ostream& operator<<(ostream& output, const Caverna_Monstro& caverna)
 {
  output << static_cast <const Dungeon&> (caverna);
  return output;

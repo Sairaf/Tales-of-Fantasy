@@ -26,7 +26,7 @@ string Cidade::getNome () const
  return this->nome;
 }
 
-ostream operator<<(ostream& output, const Cidade& cidade)
+ostream& operator<<(ostream& output, const Cidade& cidade)
 {
  output << "Nome da cidade: " << cidade.getNome()<< endl;
  output << "Numero de habitantes da cidade: " <<cidade.npc.size() <<endl;

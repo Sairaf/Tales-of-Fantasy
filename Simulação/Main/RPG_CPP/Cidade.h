@@ -18,9 +18,9 @@ class Cidade
     string nome;
     vector <string> npc;
  public:
-  Cidade(string nome = "Cidade");
-  virtual ~Cidade();
+  Cidade(string nome = "Cidade"); 
   Cidade(const Cidade&);
+  virtual ~Cidade();
 
   void   setNome(const string&);
   string getNome() const;

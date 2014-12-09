@@ -59,7 +59,7 @@ ostream& operator<<(ostream& output, const Guerreiro& heroi )
  return output;
 }
 
-Guerreiro* Guerreiro::operator+=(const Guerreiro& guerreiro)
+Guerreiro* Guerreiro::operator+=(Guerreiro* guerreiro)
 {
  Heroi::operator+=(guerreiro);
  return this;

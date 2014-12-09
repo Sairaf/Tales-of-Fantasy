@@ -453,7 +453,8 @@ ostream& operator<<(ostream& output, const Grupo grupo)
 
 Grupo* Grupo::operator+=(const Grupo& grupo)
 {
-for(i = 0; i < (int) grupo.equipe.size(); i++)
+ int i;
+ for(i = 0; i < (int) grupo.equipe.size(); i++)
  {
   this->equipe[i] = grupo.equipe[i];
  }
