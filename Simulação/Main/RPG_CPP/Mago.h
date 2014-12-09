@@ -25,13 +25,13 @@ public:
 	Mago(string nome = "Mago", string descricao = " Mago");
 	Mago(const string& ,const string&, const int&, const int&, const int&, const int&, const int&, const int&);
 	Mago(const Mago&);
-	 ~Mago();
+	~Mago();
 
 	void set_Magia_Mago(Magia*);
 
 	vector <Magia*> get_Magias_Mago() const;
 
-    Mago* operator+=(const Mago&) ;
+    	Mago* operator+=(const Mago&) ;
 
 	void Equipar(Equipamento*);
 	void Subir_De_Nivel(const int&);

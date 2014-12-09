@@ -21,12 +21,12 @@ public:
 	Ladino(const Ladino&);
 	virtual ~Ladino();
 
-    Item* Roubar(Monstro&);
-
+   	Item* Roubar(Monstro&);
 	void Equipar(Equipamento*);
-    void Subir_De_Nivel(const int&);
-    void Def_Stats();
-    Ladino* operator+=(const Ladino&);
+	void Subir_De_Nivel(const int&);
+        void Def_Stats();
+	void Menu_Ataque();
+        Ladino* operator+=(const Ladino&);
 };
 
 
