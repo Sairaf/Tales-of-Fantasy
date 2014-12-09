@@ -16,6 +16,7 @@ protected:
 	string nome_Item;
 	string descricao_Item;
 	int durabilidade;
+    const static int MAX_DURABILIDADE = 99;
 public:
     bool consumivel;
 	Item(string nome = "Item", string descricao = "Um item");

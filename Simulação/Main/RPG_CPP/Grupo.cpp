@@ -2,8 +2,6 @@
 
 Grupo::Grupo()
 {
- //this->equipe = new vector<Heroi*>;
-// this->inventario = new vector<Item*>;
 
 }
 
@@ -28,8 +26,6 @@ void Grupo::set_Heroi(Heroi* heroi){
  }
 
 Grupo::~Grupo(){
-//delete [] this->equipe;
-//delete [] this->inventario;
 
 }
 
@@ -39,18 +35,18 @@ void Grupo::set_Item(Item* item){
    else
     cout << "Limite de itens alcançado" << endl;
 }
-ostream& operator<<(ostream& output, const Grupo& grupo)
+
+void Grupo::set_Dinheiro(const int& dinheiro)
 {
- int i ;
- for(i = 0; i < grupo.MAX_HEROIS; i++)
- {
-//  output << grupo.teste2[i]<< endl;
- }
- for(i = 0; i < grupo.MAX_ITENS; i++)
- {
-  output << "Jaspion"/*grupo.inventario[i] */<< endl;
- }
- return output;
+ if(dinheiro >= 0)
+    this->Dinheiro = dinheiro;
+ else
+    this->Dinheiro = 0;
+}
+
+int Grupo::get_Dinheiro() const
+{
+ return this->Dinheiro;
 }
 
 void Grupo::Text_Menu()
@@ -431,4 +427,40 @@ void Grupo::Menu(int dungeon[][TAM], Posicao& pos_Heroi, Grupo& grupo)
  dungeon[pos_Heroi.c_Y][pos_Heroi.c_X] = 5;
 // system("cls");
  Imprimir(dungeon);
+}
+
+
+ostream& operator<<(ostream& output, const Grupo grupo)
+{
+ int i;
+ output << "Equipe :" << endl;
+ for(i = 0; i < (int) grupo.equipe.size(); i++)
+ {
+  output << i << ": "  ;
+  output << grupo.equipe[i] << endl;
+ }
+
+ output << "Inventario: " << endl;
+ for(i = 0; i < (int) grupo.inventario.size(); i++)
+ {
+  output << i << ": "  ;
+  output << grupo.inventario[i] << endl;
+ }
+
+ output << "Dinheiro: " << grupo.get_Dinheiro() << endl;
+ return output;
+}
+
+Grupo* Grupo::operator+=(const Grupo& grupo)
+{
+for(i = 0; i < (int) grupo.equipe.size(); i++)
+ {
+  this->equipe[i] = grupo.equipe[i];
+ }
+
+for(i = 0; i < (int) grupo.equipe.size(); i++)
+ {
+  this->inventario[i] = grupo.inventario[i];
+ }
+ return this;
 }

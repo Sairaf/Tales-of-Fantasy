@@ -13,11 +13,13 @@ using namespace std;
 
 class Caverna_Monstro : public Dungeon
 {
+ friend ostream& operator<<(ostream&, const Caverna_Monstro&)   ;
  public:
-    Caverna_Monstro();
+    Caverna_Monstro(string nome = "Caverna do Monstro", int salas =3 );
     Caverna_Monstro(const Caverna_Monstro&);
     ~Caverna_Monstro();
-    friend ostream& operator<<(ostream&, const Caverna_Monstro&);
+
+    Caverna_Monstro operator+=(const Caverna_Monstro);
     void Salas(Grupo& grupo);
     void Mostrar_Salas(const int&);
 

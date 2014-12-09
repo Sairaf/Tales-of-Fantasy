@@ -7,12 +7,15 @@
 #include <time.h>
 #include <stdlib.h>
 #include <math.h>
+
+#include "Cajado.h"
 #include "Equipamento.h"
 #include "Magia.h"
 #include "Heroi.h"
 
 class Mago : public Heroi
 {
+ friend ostream& operator<<(ostream& , const Mago&);
 protected:
 	vector<Magia*> lista_Magias;
     int num_Magia;
@@ -28,7 +31,9 @@ public:
 
 	vector <Magia*> get_Magias_Mago() const;
 
-	void Equipar(const Equipamento&);
+    Mago* operator+=(const Mago&) ;
+
+	void Equipar(Equipamento*);
 	void Subir_De_Nivel(const int&);
  	void Def_Stats();
  	void Menu_ataque();

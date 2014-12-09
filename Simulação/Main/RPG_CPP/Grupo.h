@@ -33,7 +33,7 @@ class Grupo
   protected:
     int MAX_HEROIS;
     int MAX_ITENS;
-
+    int Dinheiro;
   public:
     Grupo();
     Grupo(Heroi*,Item*);
@@ -46,6 +46,7 @@ class Grupo
     void set_Heroi(Heroi*);
     void set_Dinheiro(const int&);
     void set_Item(Item*);
+
     int get_Dinheiro() const;
 
     void Imprimir(int [][TAM]);
@@ -62,6 +63,6 @@ class Grupo
     Grupo* operator=(const Grupo&);
     void Menu();
 
-
+    Grupo* operator+=(const Grupo&);
 };
 #endif // GRUPO_H

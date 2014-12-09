@@ -19,3 +19,8 @@ Kuraudo::Kuraudo(const Kuraudo& kuraudo_Cpy)
 
 }
 
+ostream& operator<<(ostream& output, const Kuraudo& kuraudo)
+{
+ output << static_cast <const Monstro&> (kuraudo)<< endl;
+ return output;
+}

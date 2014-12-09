@@ -140,6 +140,12 @@ if(magia != 0)
     this->magia_Monstro.push_back(magia);
 }
 
+void Monstro::set_Item(Item* item)
+{
+ if(item != 0)
+    this->drop = item;
+}
+
 string Monstro::get_Nome_Monstro() const{
 return this->nome_Monstro;
 }
@@ -198,13 +204,42 @@ return this->magia_Monstro;
 int Monstro::get_Exp() const{
 return this->exp_Ganha;
 }
-/*
-void Monstro::Atacar(const int& opcao, const Grupo& grupo){
-srand(time(NULL));
-int alvo = rand()%grupo.equipe->size() + 0;
-switch(opcao)
-case 1: //atacar
 
+Item* Monstro::get_Item() const
+{
+ return this->drop;
 }
 
-*/
+friend ostream& operator<<(ostream& output, const Monstro& monstro)
+{
+    output << "Nome do monstro: " << monstro.get_Nome_Monstro() << endl;
+    output << "Descricao: " << monstro.get_Descricao_Monstro() << endl;
+    output << "Atributos:" <<endl;
+    output << "HP:" << monstro.get_HP_Atual_Monstro() << "/" <<monstro.get_MAX_HP_Monstro() << endl;
+    output << "MP:" << monstro.get_MP_Atual_Monstro() << "/" <<monstro.get_MAX_MP_Monstro() << endl;
+    output << "Ataque: " << monstro.get_Atk_monstro() << endl;
+    output << "Defesa:" << monstro.get_Def_monstro() << endl;
+    output << "Magia:" << monstro.get_Mag_monstro() << endl;
+    output << "Velocidade:"<< monstro.get_Vel_monstro() << endl;
+    output << "Item deixado: " << monstro.get_Item() << endl;
+    output << "Experiencia ganha: " << monstro.get_Exp() << endl;
+    output << "Magias:" << endl;
+    int i;
+    for(i = 0; i < (int) this->magia_Monstro.size(); i++)
+    {
+     output << this->magia_Monstro[i] << endl;
+    }
+
+    return output;
+}
+
+Monstro* Monstro::operator+=(const Monstro& monstro)
+{
+ this->ataque+=monstro.ataque;
+ this->defesa+=monstro.defesa;
+ this->magia+=monstro.magia;
+ this->velocidade+=monstro.velocidade;
+ this->HP+=monstro.HP;
+ this->MP+=monstro.MP;
+ return this;
+}

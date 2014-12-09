@@ -18,6 +18,18 @@ Trovao::Trovao(const Trovao& trovao_Cpy)
 
 }
 
-int Trovao::Efeito(){
-  return 3;
+int Trovao::Efeito(Mago& mago){
+  return mago.magia*2;
+}
+
+ostream operator<<(ostream output, const Trovao& trovao)
+{
+ output << static_cast <const Magia&> (trovao) << endl;
+ return output;
+}
+
+Trovao* Trovao::operator+=(const Trovao& trovao)
+{
+ Magia::operator+=(trovao);
+ return this;
 }

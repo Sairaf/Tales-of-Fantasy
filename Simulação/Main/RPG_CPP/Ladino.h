@@ -10,9 +10,10 @@
 #include "Monstro.h"
 #include "Equipamento.h"
 #include "Heroi.h"
-
+#include "Faca.h"
 class Ladino : public Heroi
 {
+friend ostream& operator<<(ostream&, const Ladino&);
 public:
 
 	Ladino(string nome = "Ladino", string descricao = "Ladino");
@@ -20,11 +21,12 @@ public:
 	Ladino(const Ladino&);
 	virtual ~Ladino();
 
-    void Roubar(Monstro&);
+    Item* Roubar(Monstro&);
 
-	void Equipar(const Equipamento&);
+	void Equipar(Equipamento*);
     void Subir_De_Nivel(const int&);
     void Def_Stats();
+    Ladino* operator+=(const Ladino&);
 };
 
 

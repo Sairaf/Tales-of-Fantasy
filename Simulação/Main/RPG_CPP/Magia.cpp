@@ -103,4 +103,8 @@ Magia* Magia::operator=(const Magia& magia){
   return this;
 }
 
-
+Magia* Magia::operator+=(const Magia& magia)
+{
+ this->poder_Magia+= magia.poder_Magia;
+ return this;
+}

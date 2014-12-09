@@ -26,3 +26,29 @@ string Cidade::getNome () const
  return this->nome;
 }
 
+ostream operator<<(ostream& output, const Cidade& cidade)
+{
+ output << "Nome da cidade: " << cidade.getNome()<< endl;
+ output << "Numero de habitantes da cidade: " <<cidade.npc.size() <<endl;
+ return output;
+}
+
+Cidade* Cidade::operator+=(const Cidade& cidade)
+{
+ vector<string> novos_Habitantes;
+ int i;
+ this->nome+=cidade.nome;
+
+ for(i = 0; i <(int) this->npc.size();i++)
+ {
+  novos_Habitantes.push_back(this->npc[i]);
+ }
+
+ for(i = 0; i <(int) this->npc.size();i++)
+ {
+  novos_Habitantes.push_back(cidade.npc[i]);
+ }
+
+ this->npc = novos_Habitantes;
+ return this;
+}

@@ -16,3 +16,15 @@ Camtasia::Camtasia(const Camtasia& camtasia_Cpy)
 
 
 }
+
+ostream& operator<<(ostream& output, const Camtasia& camtasia)
+{
+ output << static_cast <const Monstro&> (camtasia) << endl;
+ return output;
+}
+
+Camtasia* Camtasia::operator+=(const Camtasia& camtasia)
+{
+ Monstro::operator+=(camtasia);
+ return this;
+}

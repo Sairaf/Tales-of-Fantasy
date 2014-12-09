@@ -56,6 +56,12 @@ static void Verificar_Num_Salas(const Dungeon& dung)
  cout << "Existem "<< dung.get_Sala()<< "Salas nesta caverna" << endl;
 }
 
+ostream& operator<<(ostream& output, const Dungeon& dung)
+{
+ output << "Nome: " << dung.get_Nome() << endl;
+ output << "Numero de salas" << dung.get_Sala() << endl;
+ return output;
+}
 
 bool Dungeon::operator+=(const Dungeon& dung)
 {

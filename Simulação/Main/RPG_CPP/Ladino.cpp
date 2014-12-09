@@ -44,16 +44,24 @@ void Ladino::Subir_De_Nivel(const int& experiencia)
 }
 
 
-void Ladino::Roubar(Monstro& monstro)
+Item* Ladino::Roubar(Monstro& monstro)
 {
-
+ int sorte = rand()%10 + 0;
+ if(sorte == 5)
+ {
+  return monstro.get_Item();
+ }else
+ return NULL;
 }
 
-void Ladino::Equipar(const Equipamento& equipamento)
+void Ladino::Equipar(Equipamento *equipamento)
 {
-    cout <<"wat" << endl;
+ Faca* faca = dynamic_cast<Faca*>(equipamento);
+ if(faca != 0)
+ {
+  this->set_Arma_Heroi(faca);
+ }
 }
-
 
 void Ladino::Def_Stats(){
  this->lv_Atual =1;
@@ -63,4 +71,16 @@ void Ladino::Def_Stats(){
  this->defesa = 10;
  this->velocidade = 20;
  this->magia = 14;
+}
+
+ostream& operator<<(ostream& output, const Ladino& ladino)
+{
+ output << static_cast <const Heroi&> (ladino) << endl;
+ return output;
+}
+
+Ladino* Ladino:operator+=(const Ladino& ladino)
+{
+ Heroi::operator+=(ladino);
+ return this;
 }

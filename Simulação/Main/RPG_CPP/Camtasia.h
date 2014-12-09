@@ -13,14 +13,16 @@
 using namespace std;
 class Camtasia: public Monstro
 {
-protected:
+friend ostream& output<<(ostream&, const Camtasia&)
 public:
-//	Camtasia(string nome = "CAMTASIA");
     Camtasia();
     Camtasia(int hp, int mp, int ataque, int defesa, int magia, int velocidade);
 	Camtasia(const Camtasia&);
 	virtual ~Camtasia();
     void Def_Stats(){}
+    Camtasia*
+
+    Camtasia* operator+=(const Camtasia&);
 };
 
 #endif

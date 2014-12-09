@@ -57,9 +57,13 @@ vector <Magia*> Mago::get_Magias_Mago() const{
  return this->lista_Magias;
 }
 
-void Mago::Equipar(const Equipamento& equipamento)
+void Mago::Equipar(Equipamento* equipamento)
 {
-
+ Cajado* cajado = dynamic_cast <Cajado*> (equipamento);
+ if(cajado != 0)
+ {
+  this->set_Arma_Heroi(equipamento);
+ }
 }
 
 void Mago::Menu_ataque()
@@ -86,4 +90,26 @@ void Mago::Def_Stats(){
  this->defesa = 6;
  this->velocidade = 12;
  this->magia = 18;
+}
+
+Mago* Mago::operator+=(const Mago& mago)
+{
+ Heroi::operator+=(mago);
+ int i;
+ for(i = 0; i < (int) this->lista_Magias.size(); i++)
+ {
+  this->lista_Magias[i]+=magia.lista_Magias[i];
+ }
+ return this;
+}
+
+ostream& operator<<(ostream& output, const Mago& mago)
+{
+ output << static_cast <const Heroi*> (mago);
+ int i;
+ for(i = 0; i < (int) this->lista_Magias.size(); i++)
+ {
+  cout << this->lista_Magias[i];
+ }
+ return output;
 }

@@ -5,6 +5,7 @@
 #include <vector>
 #include <list>
 #include <iostream>
+#include "Mago.h"
 #include "Magia.h"
 
 using namespace std;
@@ -16,7 +17,9 @@ public:
 	Trovao();
 	Trovao(const Trovao&);
 	~Trovao();
-    int Efeito() ;
+
+	Trovao* operator+=(const Trovao&);
+    int Efeito(Mago& mago) ;
 };
 
 

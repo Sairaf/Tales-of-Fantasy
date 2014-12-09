@@ -1,5 +1,7 @@
 #include "Heroi.h"
 
+int Heroi::MAX_LV =10;
+
 Heroi::Heroi(string nome, string descricao)
 :nomeHeroi(nome), descricao(descricao)
 {
@@ -103,6 +105,25 @@ void Heroi::set_Vel_Heroi(const int& vel){
    this->velocidade = 5;
 }
 
+void Heroi::set_Armadura_Heroi(Armadura* armadura)
+{
+ if(armadura != 0)
+    this->armadura = armadura;
+}
+
+void Heroi::set_Arma_Heroi(Arma* arma)
+{
+ if(arma != 0)
+    this->arma = arma;
+}
+
+void Heroi::set_Acessorio_Heroi(Acessorio* acessorio)
+{
+ if(acessorio != 0)
+    this->acessorio = acessorio;
+}
+
+
 string Heroi::get_Nome_Heroi() const{
   return this->nomeHeroi;
 }
@@ -147,9 +168,28 @@ int Heroi::get_Mag_Heroi() const{
  return this->magia;
 }
 
-
 int Heroi::get_Vel_Heroi() const{
  return this->velocidade;
+}
+
+int Heroi::get_Nivel_Heroi() const
+{
+ return this->lv_Atual;
+}
+
+Arma* Heroi::get_Arma_Heroi() const
+{
+ return this->arma;
+}
+
+Armadura* Heroi::get_Armadura_Heroi() const
+{
+ return this->armadura;
+}
+
+Acessorio* Heroi::get_Acessorio_Heroi() const
+{
+ return this->acessorio;
 }
 
 Heroi* Heroi::operator=(const Heroi& heroi){
@@ -182,9 +222,41 @@ bool Heroi::operator<(const Heroi& heroi){
     return this->get_Vel_Heroi() < heroi.get_Vel_Heroi();
 }
 
+Heroi* Heroi::Def_Stats(Heroi* heroi){
+ heroi->lv_Atual =1;
+ heroi->HP = 100;
+ heroi->MP = 20;
+ heroi->ataque = 10;
+ heroi->defesa = 10;
+ heroi->velocidade = 10;
+ heroi->magia = 10;
+ return heroi;
+}
 
 ostream& operator<<(ostream& output, const Heroi& heroi){
-    output << "Nome do heroi" << heroi.get_Nome_Heroi() << endl;
-    output << "Descricao" << heroi.get_Descricao_Heroi() << endl;
+    output << "Nome do heroi: " << heroi.get_Nome_Heroi() << endl;
+    output << "Descricao: " << heroi.get_Descricao_Heroi() << endl;
+    output << "Atributos: " <<endl;
+    output << "Nivel: " <<heroi.get_Nivel_Heroi() << endl;
+    output << "HP: " << heroi.get_HP_ATUAL() << "/" <<heroi.get_MAX_HP_Heroi() << endl;
+    output << "MP: " << heroi.get_MP_ATUAL() << "/" <<heroi.get_MAX_MP_Heroi() << endl;
+    output << "Ataque: " << heroi.get_Atk_Heroi() << endl;
+    output << "Defesa: " << heroi.get_Def_Heroi() << endl;
+    output << "Magia: " << heroi.get_Mag_Heroi() << endl;
+    output << "Velocidade: "<< heroi.get_Vel_Heroi() << endl;
+    output << "Arma: " <<heroi.arma <<endl;
+    output << "Armadura: " <<heroi.armadura <<endl;
+    output << "Acessorio: " <<heroi.acessorio <<endl;
     return output;
+}
+
+Heroi* Heroi::operator+=(const Heroi& heroi)
+{
+ this->ataque+=heroi.ataque;
+ this->defesa+=heroi.defesa;
+ this->magia+=heroi.magia;
+ this->velocidade+=heroi.velocidade;
+ this->HP+=heroi.HP;
+ this->MP+=heroi.MP;
+ return this;
 }

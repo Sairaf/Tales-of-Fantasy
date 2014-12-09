@@ -35,6 +35,7 @@ public:
        Magia* operator=(const Magia&);
        bool operator!=(const Magia&);
 
+       Magia* operator+=(const Magia&);
        virtual int Efeito() = 0;
 };
 

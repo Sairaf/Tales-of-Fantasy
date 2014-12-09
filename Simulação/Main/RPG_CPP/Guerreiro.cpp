@@ -44,10 +44,26 @@ void Guerreiro::Subir_De_Nivel(const int& experiencia)
 }
 
 
-void Guerreiro::Equipar(const Equipamento& equipamento)
+void Guerreiro::Equipar(Equipamento* equipamento)
 {
+ Espada* espada = dynamic_cast<Espada*>(equipamento);
+ if(espada != 0)
+ {
+  this->set_Arma_Heroi(espada);
+ }
 }
 
+ostream& operator<<(ostream& output, const Guerreiro& heroi )
+{
+ output << static_cast <const Heroi&> (heroi) << endl;
+ return output;
+}
+
+Guerreiro* Guerreiro::operator+=(const Guerreiro& guerreiro)
+{
+ Heroi::operator+=(guerreiro);
+ return this;
+}
 
 void Guerreiro::Def_Stats(){
  this->lv_Atual =1;
@@ -58,4 +74,3 @@ void Guerreiro::Def_Stats(){
  this->velocidade = 5;
  this->magia = 5;
 }
-

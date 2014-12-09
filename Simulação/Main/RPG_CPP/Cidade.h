@@ -28,5 +28,6 @@ class Cidade
   void Add_NPC(const string&);
   virtual void Menu_Cidade(Grupo&) = 0;
   virtual void Menu_Texto_Cidade() = 0;
+  Cidade* operator+=(const Cidade&);
 };
 #endif // CIDADE_H

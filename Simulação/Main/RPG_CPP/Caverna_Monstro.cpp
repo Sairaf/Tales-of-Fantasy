@@ -100,3 +100,29 @@ if(num_Sala == 0)
     cout << "0 - Voltar" << endl;
    }
 }
+Caverna_Monstro::Caverna_Monstro(string nome, int salas)
+Dungeon(nome, salas)
+{
+
+}
+
+Caverna_Monstro::Caverna_Monstro(const Caverna_Monstro& caverna)
+:Dungeon(caverna)
+{
+
+}
+
+Caverna_Monstro::~Caverna_Monstro(){}
+
+
+Caverna_Monstro::operator+=(const Caverna_Monstro& caverna)
+{
+ Dungeon::operator+=(caverna);
+ return this;
+}
+
+ostream& operator<<(ostream&, const Caverna_Monstro& caverna)
+{
+ output << static_cast <const Dungeon&> (caverna);
+ return output;
+}

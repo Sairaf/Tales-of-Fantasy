@@ -20,6 +20,8 @@ class Sepolopolis: public Cidade
   void Add_NPC(const string&);
   void Menu_Cidade(Grupo&);
   void Menu_Texto_Cidade();
+
+  Sepolopolis* operator+=(const Sepolopolis&);
 };
 
 #endif
