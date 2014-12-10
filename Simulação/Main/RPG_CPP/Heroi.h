@@ -22,8 +22,8 @@ protected:
   	Arma* arma;
  	Armadura* armadura;
  	Acessorio* acessorio;
-        static int MAX_LV ;
-        int lv_Atual;
+    static int MAX_LV ;
+    int lv_Atual;
 	int HP;
 	int HP_atual;
 	int MP_atual;

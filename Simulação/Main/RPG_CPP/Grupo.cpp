@@ -1,18 +1,22 @@
 #include "Grupo.h"
 
-Grupo::Grupo()
+Grupo::Grupo(string nome)
+:Grupo_Geral(nome)
 {
 
 }
 
 
 Grupo::Grupo(const Grupo& grupo_Cpy)
+:Grupo_Geral(grupo_Cpy)
 {
  this->equipe = grupo_Cpy.equipe;
  this->inventario = grupo_Cpy.inventario;
 }
 
-Grupo::Grupo(Heroi* grupo,Item* inventario){
+Grupo::Grupo(Heroi* grupo,Item* inventario)
+:Grupo_Geral("Party")
+{
 this->equipe.push_back(grupo);
 this->inventario.push_back(inventario);
 }
@@ -72,7 +76,7 @@ void Grupo::Menu()
     cout <<"|           Inventario           |" << endl;
     cout <<"--------------------------------- <<" <<endl ;
 
-    this->Mostrar_Inventario();
+    Mostrar_Inventario(*this);
     cout << "Voce tem" << this->inventario.size() << " Itens" << endl;
   break;
   case 2:
@@ -80,7 +84,7 @@ void Grupo::Menu()
     cout <<"--------------------------------- <<" << endl ;
     cout <<"|           Inventario           |" << endl;
     cout <<"--------------------------------- <<" <<endl ;
-    this->Mostrar_Herois();
+    Mostrar_Herois(*this);
     cout << "Voce tem" << this->equipe.size() << " integrantes no grupo" << endl;
   break;
   case 3:
@@ -269,7 +273,7 @@ void Grupo::Atacar(Heroi* heroi, Monstro* monstro)
 
 void Grupo::Usar_Item(){
  int opcao;
- this->Mostrar_Inventario();
+ Mostrar_Inventario(*this);
  if(opcao >= 0 && opcao <= 99)
  {
   if(this->inventario[opcao]->consumivel == false){
@@ -281,10 +285,10 @@ void Grupo::Usar_Item(){
  }
 }
 
-void Grupo::Mostrar_Herois(){
+void Grupo::Mostrar_Herois(const Grupo& grupo){
  int i;
- for(i = 0; i < (int)this->inventario.size(); i++)
-    cout << i << " " << this->equipe[i] << endl;
+ for(i = 0; i < (int)grupo.inventario.size(); i++)
+    cout << i << " " << grupo.equipe[i] << endl;
 }
 
 
@@ -292,11 +296,11 @@ void Grupo::Ordenar_Herois(){
 sort(this->equipe.begin(), this->equipe.end());
 }
 
-void Grupo::Mostrar_Inventario()
+void Grupo::Mostrar_Inventario(const Grupo& grupo)
 {
  int i;
- for(i = 0; i < (int) this->inventario.size(); i++)
-    cout << i << " " << this->inventario[i] << endl;
+ for(i = 0; i < (int) grupo.inventario.size(); i++)
+    cout << i << " " << grupo.inventario[i] << endl;
 }
 
 void Grupo::Imprimir(int dungeon [][TAM])
@@ -433,6 +437,7 @@ void Grupo::Menu(int dungeon[][TAM], Posicao& pos_Heroi, Grupo& grupo)
 ostream& operator<<(ostream& output, const Grupo grupo)
 {
  int i;
+ output << static_cast <const Grupo_Geral&> (grupo) << enld;
  output << "Equipe :" << endl;
  for(i = 0; i < (int) grupo.equipe.size(); i++)
  {
@@ -454,6 +459,7 @@ ostream& operator<<(ostream& output, const Grupo grupo)
 Grupo* Grupo::operator+=(const Grupo& grupo)
 {
  int i;
+ Grupo::operator+=(grupo);
  for(i = 0; i < (int) grupo.equipe.size(); i++)
  {
   this->equipe[i] = grupo.equipe[i];
@@ -461,6 +467,7 @@ Grupo* Grupo::operator+=(const Grupo& grupo)
 
 for(i = 0; i < (int) grupo.equipe.size(); i++)
  {
+
   this->inventario[i] = grupo.inventario[i];
  }
  return this;

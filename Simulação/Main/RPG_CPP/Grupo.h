@@ -17,6 +17,7 @@
 #include "Ladino.h"
 #include "Item.h"
 #include "Monstro.h"
+#include "Grupo_Geral.h"
 #define TAM 5
 
 using namespace std;
@@ -27,38 +28,39 @@ typedef struct {
 }Posicao;
 
 
-class Grupo
+class Grupo : public Grupo_Geral
 {
   friend ostream& operator<<(ostream&, const Grupo&);
   protected:
     int MAX_HEROIS;
     int MAX_ITENS;
     int Dinheiro;
+
   public:
-    Grupo();
+    Grupo(string nome = "Grupo");
     Grupo(Heroi*,Item*);
     Grupo(const Grupo&);
     ~Grupo();
-	vector <Heroi*> equipe ;
-	vector <Item*> inventario;
+    vector <Heroi*> equipe ;
+    vector <Item*> inventario;
 
-    void Text_Menu();
+
     void set_Heroi(Heroi*);
     void set_Dinheiro(const int&);
     void set_Item(Item*);
 
     int get_Dinheiro() const;
-
     void Imprimir(int [][TAM]);
     int  Pesquisar(int [][TAM], int );
     void Menu(int [][TAM], Posicao&, Grupo&);
     Posicao get_Pos(int  [][TAM]);
 
+    void Text_Menu();
     void Atacar(Heroi*, Monstro*);
     void Batalhar(Monstro*);
     void Ordenar_Herois();
-    void Mostrar_Herois();
-    void Mostrar_Inventario();
+    static void Mostrar_Herois(const Grupo&);
+    static void Mostrar_Inventario(const Grupo&);
     void Usar_Item();
     Grupo* operator=(const Grupo&);
     void Menu();
