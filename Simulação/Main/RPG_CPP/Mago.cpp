@@ -12,6 +12,12 @@ Mago::Mago(const string& nome,const string& descricao, const int& hp, const int&
  // this->lista_Magias = new vector<Magia*>;
 }
 
+Mago::Mago(const Mago& mago_Cpy)
+:Heroi(mago_Cpy)
+{
+ this->lista_Magias = mago_Cpy.lista_Magias;
+}
+
 Mago::~Mago(){
  int cont;
  for(cont = 0; cont < (int) this->lista_Magias.size(); cont++)

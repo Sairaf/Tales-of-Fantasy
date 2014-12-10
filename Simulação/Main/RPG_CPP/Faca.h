@@ -12,7 +12,8 @@ class Faca: public Arma
  friend ostream& operator<<(ostream& output, const Faca&);
 public:
 	Faca();
-	Faca(int poder = 0)    ;
+	Faca(int poder = 0);
+	Faca(const Faca&);
 	//Faca(const string&, const string&,const int& ,const int& ,const int&,const int&, const int& );
 	~Faca();
 

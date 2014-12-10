@@ -6,6 +6,12 @@ Roupas_Leves::Roupas_Leves()
 
 }
 
+Roupas_Leves::Roupas_Leves(const Roupas_Leves& roupa_Cpy)
+:Armadura(roupa_Cpy)
+{
+
+}
+
 Roupas_Leves::~Roupas_Leves()
 {
 }

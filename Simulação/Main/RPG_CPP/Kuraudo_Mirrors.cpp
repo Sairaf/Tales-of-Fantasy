@@ -6,6 +6,14 @@ Kuraudo_Mirrors::Kuraudo_Mirrors()
 
 
 }
+
+Kuraudo_Mirrors::Kuraudo_Mirrors(const Kuraudo_Mirrors& kuraudo_Cpy)
+:Item(kuraudo_Cpy)
+{
+
+}
+
+
 Kuraudo_Mirrors::~Kuraudo_Mirrors(){}
 
 

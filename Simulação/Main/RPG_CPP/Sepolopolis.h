@@ -14,6 +14,7 @@ class Sepolopolis: public Cidade
  friend ostream& operator<<(ostream&, const Sepolopolis&);
  public:
       Sepolopolis(string nome ="Sepolopolis");
+      Sepolopolis(const Sepolopolis&);
       virtual ~Sepolopolis();
 
   void Vendedor(Grupo&);

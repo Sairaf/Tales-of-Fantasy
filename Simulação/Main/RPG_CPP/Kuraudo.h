@@ -16,12 +16,12 @@ class Kuraudo: public Monstro
 {
 friend ostream& operator<<(ostream&, const Kuraudo&);
 public:
-	
+
 	Kuraudo();
-    
-	~Kuraudo();
 	Kuraudo(const Kuraudo&);
-    	void Def_Stats(){};
+	~Kuraudo();
+
+    void Def_Stats(){};
 };
 
 #endif

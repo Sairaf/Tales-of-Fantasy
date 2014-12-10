@@ -22,7 +22,7 @@ protected:
 	int MP;
 	int HP_atual;
 	int MP_atual;
-	int ataque;	
+	int ataque;
 	int defesa;
 	int velocidade;
 	int magia;
@@ -50,8 +50,8 @@ public:
 	void set_Mag_Monstro(const int&);
 	void set_Vel_Monstro(const int&);
 	void set_Habilidade_Monstro(Magia*);
-        void set_Exp (const int&);
-        void set_Item (Item*);
+    void set_Exp (const int&);
+    void set_Item (Item*);
 
 	string get_Nome_Monstro() const;
 	string get_Descricao_Monstro() const;

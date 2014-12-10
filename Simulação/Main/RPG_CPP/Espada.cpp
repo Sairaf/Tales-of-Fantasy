@@ -11,6 +11,12 @@ Espada::~Espada()
 
 }
 
+Espada::Espada(const Espada& espada_Cpy)
+:Arma(espada_Cpy)
+{
+
+}
+
 void Espada::Efeito()
 {
  cout << "...Nada acontece";

@@ -6,6 +6,12 @@ Sepolopolis::Sepolopolis(string nome)
 
 }
 
+Sepolopolis::Sepolopolis(const Sepolopolis& Sepol)
+:Cidade(Sepol)
+{
+
+}
+
 Sepolopolis::~Sepolopolis(){}
 
 void Sepolopolis::Add_NPC(const string& npc){

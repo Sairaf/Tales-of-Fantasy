@@ -605,7 +605,7 @@
 	<assert.h>
 	"Item.h"
 
-1418167761 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.h
+1418181992 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.h
 	<string>
 	<vector>
 	<list>
@@ -644,7 +644,7 @@
 	"Monstro.h"
 	"Magia.h"
 
-1418167761 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.h
+1418178184 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\monstro.h
 	<string>
 	<vector>
 	<list>
@@ -660,7 +660,7 @@
 	<list>
 	<iostream>
 
-1418167760 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\cidade.cpp
+1418180307 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\cidade.cpp
 	"Cidade.h"
 
 1418167760 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\cidade.h
@@ -675,7 +675,7 @@
 1418091151 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\equipamento.cpp
 	"Equipamento.h"
 
-1418176154 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.cpp
+1418180658 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.cpp
 	"Grupo.h"
 
 1418177147 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\grupo.h
@@ -696,7 +696,7 @@
 	"Monstro.h"
 	"Grupo_Geral.h"
 
-1418167761 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.h
+1418177906 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.h
 	<string>
 	<vector>
 	<list>
@@ -743,10 +743,10 @@
 	"Heroi.h"
 	"Faca.h"
 
-1418167761 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\guerreiro.cpp
+1418181232 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\guerreiro.cpp
 	"Guerreiro.h"
 
-1418167761 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.cpp
+1418183121 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\heroi.cpp
 	"Heroi.h"
 
 1418087094 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\item.cpp
@@ -755,7 +755,7 @@
 1418097935 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\kuraudo.cpp
 	"Kuraudo.h"
 
-1418167761 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\kuraudo.h
+1418182045 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\kuraudo.h
 	<string>
 	<vector>
 	<list>
@@ -765,7 +765,7 @@
 	"Magia.h"
 	"Kuraudo_Mirrors.h"
 
-1418167761 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\kuraudo_mirrors.cpp
+1418182236 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\kuraudo_mirrors.cpp
 	"Kuraudo_Mirrors.h"
 
 1418167761 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\kuraudo_mirrors.h
@@ -775,13 +775,13 @@
 	<list>
 	<iostream>
 
-1418167761 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\ladino.cpp
+1418183152 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\ladino.cpp
 	"Ladino.h"
 
 1418099492 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\magia.cpp
 	"Magia.h"
 
-1418167761 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\mago.cpp
+1418182483 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\mago.cpp
 	"Mago.h"
 
 1418060180 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\menu.cpp
@@ -794,7 +794,7 @@
 1418167761 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\sepolopolis.cpp
 	"Sepolopolis.h"
 
-1418100657 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\sepolopolis.h
+1418183201 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\sepolopolis.h
 	<iostream>
 	<cstdlib>
 	<string>
@@ -828,7 +828,7 @@
 1418091209 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\anel_de_forca.cpp
 	"Anel_de_Forca.h"
 
-1418091190 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\anel_de_forca.h
+1418177618 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\anel_de_forca.h
 	<string>
 	<vector>
 	<list>
@@ -836,27 +836,27 @@
 	"Acessorio.h"
 	"Equipamento.h"
 
-1418091091 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\cajado.cpp
+1418180168 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\cajado.cpp
 	"Cajado.h"
 
-1418167760 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\cajado.h
+1418180092 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\cajado.h
 	<iostream>
 	<vector>
 	<string>
 	"Arma.h"
 
-1418090794 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\espada.cpp
+1418180910 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\espada.cpp
 	"Espada.h"
 
-1418167761 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\espada.h
+1418180845 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\espada.h
 	<string>
 	<iostream>
 	"Arma.h"
 
-1418090832 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\faca.cpp
+1418181083 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\faca.cpp
 	"Faca.h"
 
-1418167761 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\faca.h
+1418181044 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\faca.h
 	<string>
 	<iostream>
 	"Arma.h"
@@ -864,7 +864,7 @@
 1418090890 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\roupas_leves.cpp
 	"Roupas_Leves.h"
 
-1418056533 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\roupas_leves.h
+1418183192 c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\roupas_leves.h
 	<string>
 	<vector>
 	<list>
@@ -924,7 +924,7 @@
 1418167760 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\dungeon.cpp
 	"Dungeon.h"
 
-1418076782 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\main.cpp
+1418180346 source:c:\users\abgerson\documents\github\tales-of-fantasy\simulação\main\rpg_cpp\main.cpp
 	<iostream>
 	<cstdlib>
 	<vector>

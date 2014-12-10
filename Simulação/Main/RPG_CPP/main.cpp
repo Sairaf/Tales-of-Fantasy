@@ -9,7 +9,7 @@
 
 int main()
 {
-
+    cout << "Teste" << endl;
     system("pause");
     return EXIT_FAILURE;
 }

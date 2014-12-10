@@ -30,6 +30,21 @@ Heroi::Heroi(const string& nome, const string& descricao,const int& hp,const int
  this->magia = magia;
 }
 
+Heroi::Heroi(const Heroi& heroi_Cpy)
+{
+ this->lv_Atual =heroi_Cpy.lv_Atual;
+ this->nomeHeroi = heroi_Cpy.nomeHeroi;
+ this->descricao = heroi_Cpy.descricao;
+ this->pontosExperiencia = heroi_Cpy.pontosExperiencia;
+ this->HP = heroi_Cpy.HP;
+ this->MP = heroi_Cpy.MP;
+ this->ataque = heroi_Cpy.ataque;
+ this->defesa = heroi_Cpy.defesa;
+ this->velocidade = heroi_Cpy.velocidade;
+ this->magia = heroi_Cpy.magia;
+}
+
+
 
 Heroi::~Heroi(){
 

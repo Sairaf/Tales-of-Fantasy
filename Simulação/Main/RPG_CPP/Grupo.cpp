@@ -437,7 +437,7 @@ void Grupo::Menu(int dungeon[][TAM], Posicao& pos_Heroi, Grupo& grupo)
 ostream& operator<<(ostream& output, const Grupo grupo)
 {
  int i;
- output << static_cast <const Grupo_Geral&> (grupo) << enld;
+ output << static_cast <const Grupo_Geral&> (grupo) << endl;
  output << "Equipe :" << endl;
  for(i = 0; i < (int) grupo.equipe.size(); i++)
  {

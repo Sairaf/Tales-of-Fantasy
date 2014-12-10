@@ -14,6 +14,12 @@ Guerreiro::~Guerreiro(){
 
 }
 
+Guerreiro::Guerreiro(const Guerreiro& guerreiro_Cpy)
+:Heroi(guerreiro_Cpy)
+{
+
+}
+
 
 void Guerreiro::Subir_De_Nivel(const int& experiencia)
 {

@@ -18,7 +18,7 @@ class Roupas_Leves : public Armadura
 public:
 	Roupas_Leves();
 	~Roupas_Leves();
-
+    Roupas_Leves(const Roupas_Leves&);
     void Efeito(){};
 	void Add_Bonus(const int&){};
 };

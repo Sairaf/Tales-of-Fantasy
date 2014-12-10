@@ -17,6 +17,11 @@ Cajado::~Cajado()
 
 }
 
+Cajado::Cajado(const Cajado& cajado)
+:Arma(cajado)
+{
+
+}
 
 ostream& operator<<(ostream& output, const Cajado& cajado)
 {

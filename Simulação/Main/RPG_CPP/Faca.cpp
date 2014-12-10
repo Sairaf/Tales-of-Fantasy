@@ -11,9 +11,15 @@ Faca::~Faca()
 
 }
 
+Faca::Faca(const Faca& faca_Cpy)
+:Arma(faca_Cpy)
+{
+
+}
+
 void Faca::Efeito()
 {
- cout << "...Nada acontece";
+ cout << "...Nada acontece" << endl;
 }
 
 ostream& operator<<(ostream& output, const Faca& faca)

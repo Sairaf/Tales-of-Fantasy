@@ -12,7 +12,8 @@ class Espada: public Arma
  friend ostream& operator<<(ostream& output, const Espada&);
 public:
 	Espada();
-	Espada(int poder = 0)    ;
+	Espada(int poder = 0);
+	Espada(const Espada&);
 	//Espada(const string&, const string&,const int& ,const int& ,const int&,const int&, const int& );
 	~Espada();
 

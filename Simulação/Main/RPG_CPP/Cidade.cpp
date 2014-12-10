@@ -8,6 +8,12 @@ Cidade::Cidade(string nome)
   this->npc[i] = "Default";
 }
 
+Cidade::Cidade(const Cidade & cidade_Cpy)
+{
+ this->nome = cidade_Cpy.nome;
+ this->npc = cidade_Cpy.npc;
+}
+
 Cidade::~Cidade()
 {
 

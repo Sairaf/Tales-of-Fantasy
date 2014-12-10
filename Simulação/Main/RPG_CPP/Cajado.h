@@ -12,6 +12,7 @@ class Cajado: public Arma
  public:
  Cajado(int poder = 0);
  Cajado();
+ Cajado(const Cajado&);
  ~Cajado();
 
  inline void Efeito(){cout << "...Nada aconteceu" << endl;};

@@ -11,6 +11,12 @@ Ladino::Ladino(const string& nome, const string& descricao, const int& hp, const
 {
 }
 
+Ladino::Ladino(const Ladino& ladino_Cpy)
+:Heroi(ladino_Cpy)
+{
+
+}
+
 Ladino::~Ladino(){
 
 }
